@@ -1,0 +1,190 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Assembly analysis &#8212; mgnify-biata-2020 1 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="VIRify pipeline" href="virify.html" />
+    <link rel="prev" title="Assembling data" href="assembly-1.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="virify.html" title="VIRify pipeline"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="assembly-1.html" title="Assembling data"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">mgnify-biata-2020 1 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="assembly-analysis">
+<h1>Assembly analysis<a class="headerlink" href="#assembly-analysis" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Overview of MGnify annotation pipeline</li>
+<li>Taxonomic assignment</li>
+<li>Functional characterisation</li>
+<li>Pathways/systems</li>
+<li>Using the contig viewer</li>
+</ul>
+<div class="section" id="mgnify-hands-on-exercises">
+<h2>MGnify hands-on exercises<a class="headerlink" href="#mgnify-hands-on-exercises" title="Permalink to this headline">¶</a></h2>
+<p>For this session we will look at some of the data and analyses that are available from MGnify. We will navigate the resource, try out different ways to search for interesting samples/studies, and then investigate the analysis results that are available for assemblies.</p>
+<div class="section" id="browsing-mgnify">
+<h3>Browsing MGnify<a class="headerlink" href="#browsing-mgnify" title="Permalink to this headline">¶</a></h3>
+<p>From the MGnify front page (<a class="reference external" href="https://www.ebi.ac.uk/metagenomics/">https://www.ebi.ac.uk/metagenomics/</a>) you can see various options to browse the data. There are quick links to the various data-types (e.g. amplicon, assembly, metagenomes, etc) we support, as well as a subset of the biomes that the data covers. Click on  the “wastewater” biome icon.</p>
+<ol class="arabic simple">
+<li>How many studies does MGnify hold that relate to wastewater?</li>
+<li>How many samples does that relate to?</li>
+</ol>
+<p>From the tabs in the header bar, select <strong>Text search</strong>, and then select <strong>Samples</strong> below the search box. There are a number of  metadata fields available to allow you to filter for a sample of interest to you. Not all are relevant to all samples.
+Within the hierarchy of biomes, navigate to environmental&gt;aquatic&gt;lentic. You should see 57 samples. Now select the depth filter.</p>
+<ol class="arabic simple" start="3">
+<li>How many lentic samples have depth data associated with them?</li>
+<li>Can you identify a sample of a lentic water system from a depth between 25-50m?</li>
+</ol>
+</div>
+<div class="section" id="mgnify-assembly-analysis">
+<h3>MGnify assembly analysis<a class="headerlink" href="#mgnify-assembly-analysis" title="Permalink to this headline">¶</a></h3>
+<p>Now we will look at some assembly data that has been analysed by MGnify. Search for <strong>MGYS00003598</strong>, and go to this study page. This is a large study where MGnify have assembled the raw reads from an existing public study. The list of assemblies is shown at the bottom of the study page.</p>
+<ol class="arabic simple" start="5">
+<li>How many assemblies are included in this study?</li>
+</ol>
+<p>Click on the 2nd analysis link in the list <strong>MGYA00510849</strong>. You could alternatively search for this accession using the text search options.
+Have a look at the information within the <strong>Quality control</strong> tab.</p>
+<ol class="arabic simple" start="6">
+<li>How many contigs are included in this analysis?</li>
+<li>What length is the longest contig in this dataset?</li>
+</ol>
+<p>Click on the <strong>Taxonomic analysis</strong> tab and examine the phylum composition in the graphs and the krona plot.</p>
+<ol class="arabic simple" start="8">
+<li>What proportion of the total LSU rRNA predictions are eukaryotic?</li>
+<li>What proportion of the bacterial predictions are proteobacteria?</li>
+</ol>
+<p>Click on the <strong>Functional analysis</strong> tab. The top part of this page shows a sequence feature summary, showing the number of contigs with predicted coding sequences (pCDS), the number of pCDS with InterPro matches, etc.</p>
+<ol class="arabic simple" start="10">
+<li>How many predicted coding sequences (pCDS) are in the assembly?</li>
+<li>How many pCDS have InterProScan hits?</li>
+</ol>
+<p>Scroll down the page to the InterPro match summary section.</p>
+<ol class="arabic simple" start="12">
+<li>How many different InterPro entries are matched by the pCDS?</li>
+<li>Why is this figure different to the number of pCDS that have InterProScan hits?</li>
+</ol>
+<p>Click on the <strong>GO Terms</strong> sub-tab. This shows a summary of the most common GO terms annotated to the pCDS as both bar charts, and pie charts.</p>
+<ol class="arabic simple" start="14">
+<li>What are the top 3 biological process terms predicted for the pCDS from this assembly?</li>
+</ol>
+<p>Have a look at the information in the Pfam and KO (KEGG orthologue) sub-tabs.</p>
+<p>Click on the <strong>Pathways/Systems</strong> tab. Have a look at the data reported in the 3 sub-tabs: KEGG Module, Genome Properties, and antiSMASH.</p>
+<ol class="arabic simple" start="15">
+<li>How many KEGG modules are reported for this assembly?</li>
+<li>How many of these are 100% complete (i.e. all of the constituent KOs are found)?</li>
+<li>How many Genome Properties of the category <strong>DNA handling</strong>, are found within this assembly?</li>
+<li>How many non-ribosomal peptide synthetase gene clusters are identified by antiSMASH in this assembly?</li>
+</ol>
+<p>Click on the <strong>Contig Viewer</strong> tab.
+Load the data for the 4th contig in the list by clicking on the contig name (ERZ501066.4-NODE-4-length-276957-cov-33.799655). This contig will now be loaded into the viewer.</p>
+<ol class="arabic simple" start="19">
+<li>How long is this contig?</li>
+<li>The longest pCDS in the contig appears to start at 202339. What protein is coded for?</li>
+<li>Looking at the antiSMASH annotations, where within the contig do any transport-related genes fall?</li>
+</ol>
+<p>Zoom into that region to see the predicted regions in more detail. Have a look at the information about the various transport-related genes.
+22. What region of the contig is predicted to code for a major facilitator transporter?</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Assembly analysis</a><ul>
+<li><a class="reference internal" href="#mgnify-hands-on-exercises">MGnify hands-on exercises</a><ul>
+<li><a class="reference internal" href="#browsing-mgnify">Browsing MGnify</a></li>
+<li><a class="reference internal" href="#mgnify-assembly-analysis">MGnify assembly analysis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="assembly-1.html"
+                        title="previous chapter">Assembling data</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="virify.html"
+                        title="next chapter">VIRify pipeline</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/assembly-2.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="virify.html" title="VIRify pipeline"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="assembly-1.html" title="Assembling data"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">mgnify-biata-2020 1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, MGnify.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>
