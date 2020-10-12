@@ -16,7 +16,12 @@ RUN apt-get update; apt-get install -y build-essential ca-certificates libbz2-de
     libxcomposite1 libtiff5 libssl-dev python3 python3-dev mesa-common-dev tar python-dev sudo mercurial \
     libcurses-ocaml-dev libgl1-mesa-dri libgl1-mesa-glx mesa-utils fcitx-frontend-qt5 libqt5gui5 openjfx \
     fcitx-modules fcitx-module-dbus libedit2 libxml2-dev python sqlite3 libcanberra-gtk-module \
-    python3-pip python-pip libgsl-dev libcurl4-openssl-dev cmake
+    python3-pip python-pip libgsl-dev libcurl4-openssl-dev cmake && \
+    rm -rf /var/lib/apt/lists/*
+RUN pip3 --version
+# Upgrade pip3
+RUN pip3 install --upgrade pip==19.3
+
 ## Install packages available on default OS repo
 ########
 RUN apt update && apt install -y bwa prodigal \
