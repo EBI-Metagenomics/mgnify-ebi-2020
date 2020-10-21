@@ -134,15 +134,15 @@ To do so, go to the “BLAST” panel on the left side of the GUI.
 
     Step 1 - Select Create/view BLAST search, this will open a new window    
     
-    Step 2 - select build Blast database
+    Step 2 - Select build Blast database
     
     Step 3 - Load from FASTA file -> navigate to the genome folder /home/training/Data/Assembly/files/genome and select GCA_000164695.fasta
     
-    Step 4 - modify the  blast filters to 95% identity
+    Step 4 - Modify the  blast filters to 95% identity
     
-    Step 6 - run blast
+    Step 5 - Run blast
     
-    Step 7 - close this window
+    Step 6 - Close this window
 
 To visualise just these hits, go back to "Graph drawing” panel. 
 
