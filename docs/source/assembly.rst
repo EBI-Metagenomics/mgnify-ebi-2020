@@ -179,7 +179,7 @@ performing co-assembly of multiple datasets. Each should take about 15-20 min. I
     assembly_stats coassembly/assembly2/final.contigs.fa
     assembly_stats coassembly/assembly3/final.contigs.fa
     
-|image3|\  How do these assemblies differ to the one you generated previously with metaSPAdes? Which one do you think is best?
+|image3|\  How do these assemblies differ to the one generated previously with metaSPAdes? Which one do you think is best?
 
 .. |image1| image:: media/info.png
    :width: 0.26667in
