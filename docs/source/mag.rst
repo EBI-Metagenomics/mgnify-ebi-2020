@@ -84,7 +84,9 @@ MetaBAT:
 
     jgi_summarize_bam_contig_depths --outputDepth contigs.fasta.depth.txt input.fastq.sam.bam
 
-    # now run MetaBAT
+|image3|\  Now you can run MetaBAT as:
+
+.. code-block:: bash
 
     metabat2 --inFile  contigs.fasta --outFile contigs.fasta.metabat-bins2000/bin --abdFile contigs.fasta.depth.txt --minContig 2000
 
@@ -178,7 +180,7 @@ of Life** (**iTOL**): http://itol.embl.de/index.shtml
 reformat the tree with **FigTree**
 (http://tree.bio.ed.ac.uk/software/figtree/).
 
-In order to open Figtree navigate to: Home -> Data -> Binning -> FigTree_v1.4.4 -> lib -> figtree.jar
+In order to open Figtree navigate to: **Home -> Data -> Binning -> FigTree_v1.4.4 -> lib -> figtree.jar**
 
 |image3|\  Open the **renamed.tree** file with **FigTree** and then
 select from the toolbar **File -> Export Trees**. In the **Tree file
