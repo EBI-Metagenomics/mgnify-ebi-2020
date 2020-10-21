@@ -38,7 +38,7 @@ and the use of MEGAHIT for performing co-assembly.
 
     cd /home/training/Data/Assembly
 
-|image2|\ To run metaspades you would execute the following commands: 
+|image1|\ To run metaspades you would execute the following commands: 
 
 .. code-block:: bash
 
