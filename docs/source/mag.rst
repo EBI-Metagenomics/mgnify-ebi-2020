@@ -211,7 +211,7 @@ yourself follow these steps:
 
    **4)** To colour the clades and the outside circle according to the
    phylum of each strain, drag and drop the files **iTOL_clades.txt** and
-   **iTOL_ocircles.txt** present in /home/training/Data/Binning/iTOL_files/ into the browser window
+   **iTOL_ocircles.txt** present in /home/training/Data/Binning/iTOL_Files/ into the browser window
 
 Once that is done, all the reference genomes used by **CheckM** will be
 coloured according to their phylum name, while all the other ones left
