@@ -4,41 +4,7 @@ Assembling data
 
 - What constitutes a good assembly?
 - How to estimate assembly quality
-- Host decontamination
-- Raw read deposition vs assembly
 - Co-assembly
-
-Prerequisites
----------------
-
-For this tutorial you will need to make a working directory to store
-your data in. 
-
-.. code-block:: bash
-
-   mkdir -p ~/BiATA/session1/data
-   chmod -R 777 ~/BiATA
-   export DATADIR=~/BiATA/session1/data
-
-In this directory, downloaded the tarball from http://ftp.ebi.ac.uk/pub/databases/metagenomics/mgnify_courses/biata_2020/
-
-.. code-block:: bash
-
-   cd  ~/BiATA/session1/data
-   wget -q http://ftp.ebi.ac.uk/pub/databases/metagenomics/mgnify_courses/biata_2020/session1.tgz
-   tar xzvf session1.tgz
-
-Now makes sure that you have pulled the docker container
-
-.. code-block:: bash
-
-    docker pull microbiomeinformatics/biata-qc-assembly
-
-Finally, start the docker container in the following way:
-
-.. code-block:: bash
-
-   docker run --rm -it  -e DISPLAY=$DISPLAY  -v $DATADIR:/opt/data -v /tmp/.X11-unix:/tmp/.X11-unix:rw  -e DISPLAY=docker.for.mac.localhost:0 microbiomeinformatics/biata-qc-assembly
 
 Assembly and Co-assembly
 ----------------------------------
@@ -51,8 +17,7 @@ assembly, we will only be investigating very simple example datasets as
 these often take days of CPU time and 100s of GB of memory. Thus, do not
 think that there is an issue with the assemblies.
 
-Once you have quality filtered your sequencing reads (see Part 1 of this
-session), you may want to perform *de novo* assembly in addition to, or
+Once you have quality filtered your sequencing reads, you may want to perform *de novo* assembly in addition to, or
 as an alternative to a read-based analyses. The first step is to
 assemble your sequences into contigs. There are many tools available for
 this, such as MetaVelvet, metaSPAdes, IDBA-UD, MegaHIT. We generally use
@@ -65,29 +30,20 @@ also their computational overhead. Compare these factors to what you
 have available. For example, very diverse samples with a lot of
 sequence data uses a lot of memory with SPAdes. In the following
 practicals we will demonstrate the use of metaSPAdes on a small sample
-and the use of MegaHIT for performing co-assembly.
+and the use of MEGAHIT for performing co-assembly.
 
-|image2|\ Using the sequences that you have previously QC-ed, run
-metaspades. To make things faster, we are going to turn-off metaspades
-own read error correction method, by specifying the command
---only-assembler. 
+|image1|\ Let's first change to the working directory where will be running the analyses:
 
 .. code-block:: bash
 
-    cd /opt/data
+    cd /home/training/Data/Assembly
+
+|image2|\ To run metaspades you would execute the following commands: 
+
     mkdir assembly
-    metaspades.py \
-            -t 2  \
-            --only-assembler \
-            -m 10 \
-            -1 /opt/data/clean/oral_human_example_1_splitaa_kneaddata_paired_1.fastq \
-            -2 /opt/data/clean/oral_human_example_1_splitaa_kneaddata_paired_2.fastq \
-            -o /opt/data/assembly
+    metaspades.py -t 2 --only-assembler -m 10 -1 reads/oral_human_example_1_splitaa_kneaddata_paired_1.fastq -2 reads/oral_human_example_1_splitaa_kneaddata_paired_2.fastq -o assembly
 
-|image1|\ This takes about 1 hour to complete. 
-
-|image2|\ Once this completes, we can investigate the assembly. The
-first step is to simply look at the contigs.fasta file.  
+|image2|\ However, since the assembly process would take ~1h we are just going to analyse the output present in assembly.bak. Let's look at the contigs.fasta file.  
 
 Now take the first 40 lines of the sequence and perform a blast search
 at NCBI (https://blast.ncbi.nlm.nih.gov/Blast.cgi, choose
@@ -97,7 +53,7 @@ perform the following:
 
 .. code-block:: bash
 
-    head -41 contigs.fasta
+    head -41 assembly.bak/contigs.fasta
 
 |image8|\
 
@@ -109,8 +65,7 @@ result at all?  
 
 .. code-block:: bash
 
-    cd /opt/data/assembly
-    assembly_stats scaffolds.fasta
+    assembly_stats assembly.bak/scaffolds.fasta
 
 |image1|\ This will output two simple tables in JSON format, but it is
 fairly simple to read. There is a section that corresponds to the
@@ -150,7 +105,7 @@ In the the Bandage GUI perform the following
 
     Select File->Load graph
 
-    Navigate to  /opt/data/assembly and select on assembly_graph_after_simplification.gfa
+    Navigate to  /home/training/Data/Assembly/files/assembly.bak/ and select on assembly_graph_after_simplification.gfa
 
 Once loaded, you need to draw the graph. To do so, under the “Graph
 drawing” panel on the left side perform the following:
@@ -179,7 +134,7 @@ To do so, go to the “BLAST” panel on the left side of the GUI.
     
     Step 2 - select build Blast database
     
-    Step 3 - Load from FASTA file -> navigate to the genome folder /opt/data/genome and select GCA_000164695.fasta
+    Step 3 - Load from FASTA file -> navigate to the genome folder /home/training/Data/Assembly/files/genome and select GCA_000164695.fasta
     
     Step 4 - modify the  blast filters to 95% identity
     
@@ -209,13 +164,12 @@ have a single paired-end assembly. 
 
 .. code-block:: bash
 
-    megahit -1 clean_other/oral_human_example_1_splitac_kneaddata_paired_1.fastq -2 clean_other/oral_human_example_1_splitac_kneaddata_paired_1.fastq -o  coassembly/assembly1 -t 2 --k-list 23,51,77 
+    megahit -1 reads/oral_human_example_1_splitac_kneaddata_paired_1.fastq -2 reads/oral_human_example_1_splitac_kneaddata_paired_1.fastq -o  coassembly/assembly1 -t 2 --k-list 23,51,77 
 
 |image2|\  Now run the assembly_stats on the contigs for this assembly.
 
 .. code-block:: bash
 
-   cd /opt/data
    assembly_stats coassembly/assembly1/final.contigs.fa
 
 |image3|\  How do these differ to the ones you generated previously? What may account for these differences?
@@ -228,30 +182,27 @@ both, such that the mate pairs match up.
 
 .. code-block:: bash
 
-    cd /opt/data
-    megahit -1    clean_other/oral_human_example_1_splitac_kneaddata_paired_1.fastq,clean_other/oral_human_example_1_splitab_kneaddata_paired_1.fastq  -2 clean_other/oral_human_example_1_splitac_kneaddata_paired_1.fastq,clean_other/oral_human_example_1_splitab_kneaddata_paired_2.fastq -o coassembly/assembly2 -t 2 --k-list 23,51,77 
+    megahit -1 reads/oral_human_example_1_splitac_kneaddata_paired_1.fastq,reads/oral_human_example_1_splitab_kneaddata_paired_1.fastq  -2 reads/oral_human_example_1_splitac_kneaddata_paired_1.fastq,reads/oral_human_example_1_splitab_kneaddata_paired_2.fastq -o coassembly/assembly2 -t 2 --k-list 23,51,77 
 
 |image2|\  Now perform another co-assembly, depending on the computer
 you have, either change one of the previous fastq files for the 
 
 .. code-block:: bash
 
-    megahit -1 clean_other/oral_human_example_1_splitab_kneaddata_paired_1.fastq,clean_other/oral_human_example_1_splitac_kneaddata_paired_1.fastq,clean/oral_human_example_1_splitaa_kneaddata_paired_1.fastq -2 clean_other/oral_human_example_1_splitab_kneaddata_paired_2.fastq,clean_other/oral_human_example_1_splitac_kneaddata_paired_2.fastq,clean/oral_human_example_1_splitaa_kneaddata_paired_2.fastq -o coassembly/assembly3 -t 2 --k-list 23,51,77   
+    megahit -1 reads/oral_human_example_1_splitab_kneaddata_paired_1.fastq,reads/oral_human_example_1_splitac_kneaddata_paired_1.fastq,reads/oral_human_example_1_splitaa_kneaddata_paired_1.fastq -2 reads/oral_human_example_1_splitab_kneaddata_paired_2.fastq,reads/oral_human_example_1_splitac_kneaddata_paired_2.fastq,reads/oral_human_example_1_splitaa_kneaddata_paired_2.fastq -o coassembly/assembly3 -t 2 --k-list 23,51,77   
 
-|image1|\ This takes about 20-30 minutes. Also, if you are using a
-laptop, make sure that it does not go into standby mode.
+|image1|\ This takes about 20-30 minutes.
 
 |image2|\ You should now have three different assemblies, two provide
 and one generated by yourselves. Now let us compare the assemblies.
 
 .. code-block:: bash
 
-    cd /opt/data
     assembly_stats coassembly/assembly1/final.contigs.fa
     assembly_stats coassembly/assembly2/final.contigs.fa
     assembly_stats coassembly/assembly3/final.contigs.fa
 
-|image1|\ We only have contigs.fa from MegaHIT, so the contigs and
+|image1|\ We only have contigs.fa from MEGAHIT, so the contigs and
 scaffold sections are the same.
 
 |image3|\  Has the assembly improved? If so how?
