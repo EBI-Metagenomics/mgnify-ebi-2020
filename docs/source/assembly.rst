@@ -20,7 +20,7 @@ think that there is an issue with the assemblies.
 Once you have quality filtered your sequencing reads, you may want to perform *de novo* assembly in addition to, or
 as an alternative to a read-based analyses. The first step is to
 assemble your sequences into contigs. There are many tools available for
-this, such as MetaVelvet, metaSPAdes, IDBA-UD, MegaHIT. We generally use
+this, such as MetaVelvet, metaSPAdes, IDBA-UD, MEGAHIT. We generally use
 metaSPAdes, as in most cases it yields the best contig size statistics
 (i.e. more continguous assembly) and has been shown to be able to
 capture high degrees of community diversity (Vollmers, et al. PLOS One
@@ -32,7 +32,7 @@ sequence data uses a lot of memory with SPAdes. In the following
 practicals we will demonstrate the use of metaSPAdes on a small sample
 and the use of MEGAHIT for performing co-assembly.
 
-|image1|\ Let's first change to the working directory where will be running the analyses:
+|image1|\ Let's first change to the working directory where we will be running the analyses:
 
 .. code-block:: bash
 
@@ -157,42 +157,19 @@ You should then see something like this:
 |image9|\
 
 |image1|\ In the following steps of this exercise, we will look at
-performing co-assembly of multiple datasets. Due to computational
-limitations, we can only look a example datasets.  However, the
-principles are the same. We have also pre-calculated some assemblies for
-you. In the co-assembly directory, there are already 2 assemblies.  We
-have a single paired-end assembly. 
+performing co-assembly of multiple datasets. Each should take about 15-20 min. In case you do not manage to finish these on time, the directory **coassembly.bak** contains all the expected results.
 
 .. code-block:: bash
 
     megahit -1 reads/oral_human_example_1_splitac_kneaddata_paired_1.fastq -2 reads/oral_human_example_1_splitac_kneaddata_paired_2.fastq -o  coassembly/assembly1 -t 4 --k-list 23,51,77 
 
-|image2|\  Now run the assembly_stats on the contigs for this assembly.
-
-.. code-block:: bash
-
-   assembly_stats coassembly/assembly1/final.contigs.fa
-
-|image3|\  How do these differ to the ones you generated previously? What may account for these differences?
-
-|image1|\ We have also generated the first coassembly using MegaHIT.
-This was produced using the following command.  To specify the files, we
-put all of the forward file as a comma separated list, and all of the
-reversed as a comma separated list, which should be ordered that same in
-both, such that the mate pairs match up.
-
 .. code-block:: bash
 
     megahit -1 reads/oral_human_example_1_splitac_kneaddata_paired_1.fastq,reads/oral_human_example_1_splitab_kneaddata_paired_1.fastq  -2 reads/oral_human_example_1_splitac_kneaddata_paired_2.fastq,reads/oral_human_example_1_splitab_kneaddata_paired_2.fastq -o coassembly/assembly2 -t 4 --k-list 23,51,77 
 
-|image2|\  Now perform another co-assembly, depending on the computer
-you have, either change one of the previous fastq files for the 
-
 .. code-block:: bash
 
     megahit -1 reads/oral_human_example_1_splitab_kneaddata_paired_1.fastq,reads/oral_human_example_1_splitac_kneaddata_paired_1.fastq,reads/oral_human_example_1_splitaa_kneaddata_paired_1.fastq -2 reads/oral_human_example_1_splitab_kneaddata_paired_2.fastq,reads/oral_human_example_1_splitac_kneaddata_paired_2.fastq,reads/oral_human_example_1_splitaa_kneaddata_paired_2.fastq -o coassembly/assembly3 -t 4 --k-list 23,51,77   
-
-|image1|\ This takes about 20-30 minutes.
 
 |image2|\ You should now have three different assemblies, let us compare the results.
 
@@ -201,8 +178,8 @@ you have, either change one of the previous fastq files for the 
     assembly_stats coassembly/assembly1/final.contigs.fa
     assembly_stats coassembly/assembly2/final.contigs.fa
     assembly_stats coassembly/assembly3/final.contigs.fa
-
-|image3|\  Has the assembly improved? If so how?
+    
+|image3|\  How do these assemblies differ to the one you generated previously with metaSPAdes? Which one do you think is best?
 
 .. |image1| image:: media/info.png
    :width: 0.26667in
