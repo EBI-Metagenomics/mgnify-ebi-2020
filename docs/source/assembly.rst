@@ -40,6 +40,8 @@ and the use of MEGAHIT for performing co-assembly.
 
 |image2|\ To run metaspades you would execute the following commands: 
 
+.. code-block:: bash
+
     mkdir assembly
     metaspades.py -t 2 --only-assembler -m 10 -1 reads/oral_human_example_1_splitaa_kneaddata_paired_1.fastq -2 reads/oral_human_example_1_splitaa_kneaddata_paired_2.fastq -o assembly
 
