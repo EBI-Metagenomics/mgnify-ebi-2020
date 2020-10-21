@@ -251,3 +251,31 @@ information available on how to do this in this Online Training guide
 provided by EMBL-EBI
 
 https://www.ebi.ac.uk/training/online/course/ebi-metagenomics-portal-submitting-metagenomics-da/considerations-submitting-metagenomic-data
+
+.. |image1| image:: media/info.png
+   :width: 0.26667in
+   :height: 0.26667in
+.. |image2| image:: media/action.png
+   :width: 0.26667in
+   :height: 0.26667in
+.. |image3| image:: media/question.png
+   :width: 0.26667in
+   :height: 0.26667in
+.. |image4| image:: media/fastqc1.png
+   :width: 6.26389in
+   :height: 4.30833in
+.. |image5| image:: media/fastqc2.png
+   :width: 6.26389in
+   :height: 4.30833in
+.. |image6| image:: media/multiqc1.png
+   :width: 6.26389in
+   :height: 4.30833in
+.. |image7| image:: media/multiqc2.png
+   :width: 6.26389in
+   :height: 4.30833in
+.. |image8| image:: media/blast.png
+   :width: 6.26389in
+   :height: 3.86181in
+.. |image9| image:: media/bandage.png
+   :width: 6.26389in
+   :height: 3.67569in
