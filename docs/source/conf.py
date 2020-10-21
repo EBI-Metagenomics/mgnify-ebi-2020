@@ -44,7 +44,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'mgnify-biata-2020'
+project = u'mgnify-ebi-2020'
 copyright = u'2020, MGnify'
 author = u'MGnify'
 
@@ -199,7 +199,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
   ('index', 'MetagenomicsWorkshop.tex', 'Metagenomics Workshop Documentation',
-   'Alex Sczyrba', 'manual'),
+   'MGnify team', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -229,7 +229,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'metagenomicsworkshop', 'Metagenomics Workshop Documentation',
-     ['Alex Sczyrba'], 1)
+     ['MGnify team'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -243,7 +243,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'MetagenomicsWorkshop', 'Metagenomics Workshop Documentation',
-   'Alex Sczyrba', 'MetagenomicsWorkshop', 'One line description of project.',
+   'MGnify team', 'MetagenomicsWorkshop', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -264,9 +264,9 @@ texinfo_documents = [
 
 # Bibliographic Dublin Core info.
 epub_title = 'Metagenomics Workshop'
-epub_author = 'Alex Sczyrba'
-epub_publisher = 'Alex Sczyrba'
-epub_copyright = '2015, Alex Sczyrba'
+epub_author = 'MGnify team'
+epub_publisher = 'MGnify team'
+epub_copyright = '2020, MGnify team'
 
 # The basename for the epub file. It defaults to the project name.
 #epub_basename = 'Metagenomics Workshop'
