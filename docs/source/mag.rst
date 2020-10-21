@@ -9,7 +9,7 @@ MAG generation
 Prerequisites
 ---------------
 
-For this tutorial you will need to first start the docker container in the following way:
+For this tutorial you will need to first start the docker container by running:
 
 .. code-block:: bash
 
@@ -180,11 +180,11 @@ of Life** (**iTOL**): http://itol.embl.de/index.shtml
 reformat the tree with **FigTree**
 (http://tree.bio.ed.ac.uk/software/figtree/).
 
-In order to open Figtree navigate to: **Home -> Data -> Binning -> FigTree_v1.4.4 -> lib -> figtree.jar**
+In order to open **FigTree** navigate to: **Home -> Data -> Binning -> FigTree_v1.4.4 -> lib -> figtree.jar**
 
-|image3|\  Open the **renamed.tree** file with **FigTree** and then
+|image3|\  Open the **renamed.tree** file with **FigTree** (**File -> Open**) and then
 select from the toolbar **File -> Export Trees**. In the **Tree file
-format** select **Newick** and export the file as **renamed.nwk** (choose a name you will recognise if you plan to use the shared account described below).
+format** select **Newick** and export the file as **renamed.nwk** (or choose a name you will recognise if you plan to use the shared account described below).
 
 |image3|\  To use **iTOL** you will need a user account. For the
 purpose of this tutorial we have already created one for you with an
@@ -200,9 +200,7 @@ and select
 **IBD_checkm.nwk** from the **Imported trees** workspace.
 
 Alternatively, if you want to create your own account and plot the tree
-yourself
-
-follow these steps:
+yourself follow these steps:
 
    **1)** After you have created and logged in to your account go to **My Trees**
 
