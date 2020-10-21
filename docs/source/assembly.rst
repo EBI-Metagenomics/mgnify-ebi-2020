@@ -47,10 +47,10 @@ and the use of MEGAHIT for performing co-assembly.
 
 |image2|\ However, since the assembly process would take ~1h we are just going to analyse the output present in assembly.bak. Let's look at the contigs.fasta file.  
 
-Now take the first 40 lines of the sequence and perform a blast search
+For this, take the first 40 lines of the sequence and perform a blast search
 at NCBI (https://blast.ncbi.nlm.nih.gov/Blast.cgi, choose
 Nucleotide:Nucleotide from the set of options). Leave all other options
-as default on the search page. To select the first 40 lines of sequence
+as default on the search page. To select the first 40 lines of the assembly
 perform the following:
 
 .. code-block:: bash
@@ -130,17 +130,17 @@ this is a tiny dataset, lets try to see if there is evidence for this
 genome. To do so, we will search the *R. dentocariosa* genome against
 the assembly graph.
 
-To do so, go to the “BLAST” panel on the left side of the GUI.
+To do so, go to the 'BLAST' panel on the left side of the GUI.
 
-    Step 1 - Select Create/view BLAST search, this will open a new window    
+    Step 1 - Select 'Create/view BLAST search', this will open a new window    
     
-    Step 2 - Select build Blast database
+    Step 2 - Select 'build Blast database'
     
     Step 3 - Load from FASTA file -> navigate to the genome folder /home/training/Data/Assembly/files/genome and select GCA_000164695.fasta
     
-    Step 4 - Modify the  blast filters to 95% identity
+    Step 4 - Modify the BLAST filters to 95% identity
     
-    Step 5 - Run blast
+    Step 5 - Run BLAST
     
     Step 6 - Close this window
 
@@ -150,12 +150,11 @@ To visualise just these hits, go back to "Graph drawing” panel. 
     
     Set Distance 2
     
-    The click on Draw graph
+    The click on 'Draw graph'
 
 You should then see something like this:
 
 |image9|\
-
 
 |image1|\ In the following steps of this exercise, we will look at
 performing co-assembly of multiple datasets. Due to computational
