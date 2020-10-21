@@ -9,34 +9,11 @@ MAG generation
 Prerequisites
 ---------------
 
-For this tutorial you will need to make a working directory to store
-your data in. 
+For this tutorial you will need to first start the docker container in the following way:
 
 .. code-block:: bash
 
-    mkdir -p ~/BiATA/session4/data
-    chmod -R 777 ~/BiATA
-    export DATADIR=~/BiATA/session4/data 
-
-In this directory, downloaded the tarball from http://ftp.ebi.ac.uk/pub/databases/metagenomics/mgnify_courses/biata_2020/
-
-.. code-block:: bash
-
-    cd  ~/BiATA/session4/data
-    wget -q http://ftp.ebi.ac.uk/pub/databases/metagenomics/mgnify_courses/biata_2020/session4.tgz
-    tar xzvf session4.tgz
-
-Now makes sure that you have pulled the docker container
-
-.. code-block:: bash
-
-    docker pull microbiomeinformatics/biata-binning
-
-Finally, start the docker container in the following way:
-
-.. code-block:: bash
-
-    docker run --rm -it  -e DISPLAY=$DISPLAY  -v $DATADIR:/opt/data -v /tmp/.X11-unix:/tmp/.X11-unix:rw  -e DISPLAY=docker.for.mac.localhost:0 microbiomeinformatics/biata-binning
+    sudo docker run --rm -it -v /home/training/Data/Binning:/opt/data microbiomeinformatics/mgnify-ebi-2020-binning
 
 Generating metagenome assembled genomes
 ----------------------------------------
@@ -92,15 +69,6 @@ generate the coverage stats (*input.fastq.sam.bam).*
 
 **Running MetaBAT**
 
-|image3|\  Create a working directory on your desktop:
-
-.. code-block:: bash
-
-    tar zxvf seesion4.tgz
-
-This should contain the following two file *contigs.fasta*
-and *input.fastq.sam.bam*.
-
 |image3|\ Create a subdirectory where files will be output:
 
 .. code-block:: bash
@@ -114,23 +82,21 @@ MetaBAT:
 
 .. code-block:: bash
 
-    cd /opt/data/assemblies/
     jgi_summarize_bam_contig_depths --outputDepth contigs.fasta.depth.txt input.fastq.sam.bam
 
     # now run MetaBAT
 
-    cd /opt/data/assemblies/
     metabat2 --inFile  contigs.fasta --outFile contigs.fasta.metabat-bins2000/bin --abdFile contigs.fasta.depth.txt --minContig 2000
 
 |image3|\ Once the binning process is complete, each bin will be
 grouped into a multi-fasta file with a name structure of
 **bin.[0-9].fa**.
 
-|image3|\ Move to the output directory and look at the output of the binning process.
+|image3|\ Inspect the output of the binning process.
 
 .. code-block:: bash
 
-    cd /opt/data/assemblies/*contigs.fasta.metabat-bins2000/bin
+    ls contigs.fasta.metabat-bins2000/bin*
 
 |image4|\  How many bins did the process produce?
 
@@ -153,21 +119,12 @@ and **strain heterogeneity** of the predicted genome. 
 
 .. code-block:: bash
 
-    mkdir checkm_data
-    mv checkm_data_2015_01_16.tar.gz checkm_data
-    tar zxvf checkm_data_2015_01_16.tar.gz
     checkm data setRoot /opt/data/checkm_data
 
 This program has some handy tools not only for quality control, but also
 for taxonomic classification, assessing coverage, building a
 phylogenetic tree, etc. The most relevant ones for this exercise are
 wrapped into the **lineage_wf** workflow.
-
-Move back to the top level directory 
-
-.. code-block:: bash
-
-    cd /opt/data/assemblies/
 
 Now run CheckM with the following command:
 
@@ -180,13 +137,20 @@ Due to memory constraints (< 40 GB), we have added the option
 reference genomes.
 
 Once the **lineage_wf** analysis is done, the reference tree can be
-found in **checkm_output/storage/tree/concatenated.tre**. Additionally,
-you will have the taxonomic assignment and quality assessment of each
+found in **checkm_output/storage/tree/concatenated.tre**. 
+
+Additionally, you will have the taxonomic assignment and quality assessment of each
 bin in the file **MAGs_checkm.tab** with the corresponding level of
 **completeness**, **contamination** and **strain heterogeneity** (Fig.
 2). A quick way to infer the overall quality of the bin is to calculate
 the level of **(completeness - 5*contamination)**. You should be aiming for an overall score of at
 least **70-80%**.
+
+You can inspect the CheckM output with:
+
+.. code-block:: bash
+
+    cat MAGs_checkm.tab
 
  |image5|\
 
@@ -214,11 +178,7 @@ of Life** (**iTOL**): http://itol.embl.de/index.shtml
 reformat the tree with **FigTree**
 (http://tree.bio.ed.ac.uk/software/figtree/).
 
-You should be able to run FigTree as follows:
-
-.. code-block:: bash
-
-    figtree
+In order to open Figtree navigate to: Home -> Data -> Binning -> FigTree_v1.4.4 -> lib -> figtree.jar
 
 |image3|\  Open the **renamed.tree** file with **FigTree** and then
 select from the toolbar **File -> Export Trees**. In the **Tree file
@@ -235,7 +195,7 @@ example tree. The login is as follows:
 After you login, just click on **My Trees** in the toolbar at the top
 and select
 
-**IBD_checkm_tree.nwk** from the **Imported trees** workspace.
+**IBD_checkm.nwk** from the **Imported trees** workspace.
 
 Alternatively, if you want to create your own account and plot the tree
 yourself
@@ -251,7 +211,7 @@ follow these steps:
 
    **4)** To colour the clades and the outside circle according to the
    phylum of each strain, drag and drop the files **iTOL_clades.txt** and
-   **iTOL_ocircles.txt** into the browser window
+   **iTOL_ocircles.txt** present in /home/training/Data/Binning/iTOL_files/ into the browser window
 
 Once that is done, all the reference genomes used by **CheckM** will be
 coloured according to their phylum name, while all the other ones left
