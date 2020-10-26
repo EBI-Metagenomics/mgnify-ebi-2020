@@ -117,3 +117,24 @@ Now we will look at some assembly data that has been analysed by MGnify.
 |question| What region of the contig is predicted to code for a major facilitator transporter? 
 
 |info| There are lots of different visualisation options available within the contig viewer. Take some time now to investigate the various options, and play about with it by looking at a few different contigs and the anotations they contain.
+
+MGnify sequence search
+**************************
+
+Now we will have a look at the database of proteins identified by MGnify. 
+
+|action| Click on "Sequence search" from the tabs at the top of the page. 
+
+This will open a HMMER search page specific for MGnify. For more information about HMMER, and searching sequence databases and profile hidden Markov model (HMM) libraries, see the HMMER website https://www.ebi.ac.uk/Tools/hmmer/
+
+|action| Copy and paste the protein sequence below into the sequence search box at the top of the page.
+
+```GEFWHWTNLLHFILVGLAGGMAFLTALLHLKGHPEARRYTLWALGLIALDLFVLWAESPARFRFTHVWLFLSFHPTSPIWWGSWGLALSVSAGLLYLGKGPSKPLAWGLLAFSLVALAYPGMALAVNLNRPLWNALLAGLFPLTALVLGLGVAVLMKSSWALYPLRILLGASLFLAFLYPFTLTLEARGHLWEEGGVLYGLFLALGLGAFGKESLAPWAAFLAAAGLRALLVAVGQWQG```
+
+|question| How many query results are significant? (i.e. above the red cut-off line)
+
+|action| Click on the "Customise" button at the top right of the results table, and select to make "Run and sample IDs" column visible and click "Update". Have a look at the sample data for some of the runs listed in the results (for example the top match result).
+
+|question| Looking at the samples included in the significant results, does it make sense that the example sequence was from this protein family? IPR032796 - Polysulfide reductase.
+
+
