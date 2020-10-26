@@ -37,7 +37,7 @@ From the MGnify front page (https://www.ebi.ac.uk/metagenomics/) you can see var
 
 |question| How many samples does that relate to?
 
-|action| From the sample list, select the 3rd sample down (ERS1215575), and take a look at the metadata available.
+|action| From the sample list, filter for sample "ERS1215575", select it and take a look at the metadata available.
 
 |question| Do you know the exact location of where the sample was taken?
 
