@@ -7,36 +7,37 @@ that can be used to access microbiome data programmatically from MGnify. You wil
 of the API and the data, as well as how to write scripts to analyze data programmatically.
 
 Learning objectives
-^^^^^^^^^^^^^^^^^^^
+###################
 
 - Understand how to access data using MGnify API
 - Understand how to filter data sets using metadata
 - Learn how to write scripts to programmatically access to the data
 
 Prerequisites
--------------
+#############
 
-For this tutorial you will need a working directory to store that data .. important:: 
+For this tutorial you will need a working directory to store that data:
 
-...code-block:: bash
-    mkdir -p ~/Mgnify2020/session_api/
-    export DATA_DIR=~/Mgnify2020/session_api/
+.. code-block:: bash
 
+   mkdir -p ~/Mgnify2020/session_api/
+   export DATA_DIR=~/Mgnify2020/session_api/
 
 You will also need the dependencies, we will install them using miniconda.
 
-...code-block:: bash
-    conda create -n mgnify-api python=3.8
+.. code-block:: bash
 
-    conda activate mgnify-api
+   conda create -n mgnify-api python=3.8
 
-    pip install pandas numpy scipy plotnine jsonapi-client
+   conda activate mgnify-api
+
+   pip install pandas numpy scipy plotnine jsonapi-client
 
 We are using miniconda to create a virtual in
 
 
 An introduction to MGnify REST API
-----------------------------------
+##################################
 
 MGnify is a freely avaiable hub for the analysis and exploration of metagenomic, metatranscriptomic,
 amplicon and assembled datasets. The resource provides rich functional and taxonomic analyses of
@@ -45,7 +46,7 @@ from the European Nucleotide Archive (ENA).
 
 
 How to browse data using MGnify REST API
-----------------------------------------
+****************************************
 
 The MGnify REST API allows retrieval of over 400.000 (and counting) publicy
 avaiable metagenomics, metatranscriptomic, amplicon and assembly datasets,
