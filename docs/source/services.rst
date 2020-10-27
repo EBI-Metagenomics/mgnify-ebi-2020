@@ -125,7 +125,7 @@ Now we will have a look at the database of proteins identified by MGnify.
 
 |action| Click on "Sequence search" from the tabs at the top of the page. 
 
-This will open a HMMER search page specific for MGnify. For more information about HMMER, and searching sequence databases and profile hidden Markov model (HMM) libraries, see the HMMER website https://www.ebi.ac.uk/Tools/hmmer/
+This will open a HMMER search page specific for MGnify. For more information about the HMMER suite of tools see the HMMER website https://www.ebi.ac.uk/Tools/hmmer/
 
 |action| Copy and paste the protein sequence below into the sequence search box at the top of the page, and click "submit".
 
