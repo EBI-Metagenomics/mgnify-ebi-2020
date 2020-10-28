@@ -2,6 +2,29 @@
 Quality control and filtering of the raw sequence files
 *******************************************************
 
+Prerequisites
+---------------
+
+For this tutorial you will need to move into the working directory. All the required files should be here, or can be
+downloaded using the tarball from http://ftp.ebi.ac.uk/pub/databases/metagenomics/mgnify_courses/ebi_2020/
+
+.. code-block:: bash
+
+    cd /home/training/Data/Quality/files
+    chmod -R 777 /home/training/Data/Quality
+    export DATADIR=/home/training/Data/Quality/files
+    wget -q http://ftp.ebi.ac.uk/pub/databases/metagenomics/mgnify_courses/ebi_2020/quality.tar.gz
+    tar xzvf quality.tar.gz
+
+Finally, start the docker container in the following way:
+
+.. code-block:: bash
+
+   docker run --rm -it  -e DISPLAY=$DISPLAY  -v $DATADIR:/opt/data -v /tmp/.X11-unix:/tmp/.X11-unix:rw  -e DISPLAY=docker.for.mac.localhost:0 microbiomeinformatics/mgnify-ebi-2020-qc-asssembly
+
+Quality control and filtering of the raw sequence files
+-----------------------------------------------------------------
+
 |image1|\ Learning Objectives - in the following exercises you will learn
 how to check on the quality of short read sequences: identify the
 presence of adaptor sequences, remove both adaptors and low quality
@@ -36,7 +59,7 @@ terminal running the Docker container.
 |image2|\  Now on your **local** computer, go to the browser, and
 ``File -> Open File``. Use the file navigator to select the following file
 
-    ~/BiATA/session1/data/fastqc_results/oral_human_example_1_splitaa_fastqc.html
+    /home/training/Data/Quality/files/fastqc_results/oral_human_example_1_splitaa_fastqc.html
 
 |image4|\
 
@@ -101,7 +124,7 @@ summarised report.
 MultiQC. To do so, go to your browser, and use ``File -> Open File``. Use the
 file navigator to select the following file
 
-  ~/BiATA/session1/data//multiqc_results/multiqc_report.html
+  /home/training/Data/Quality/files/multiqc_results/multiqc_report.html
 
 |image6|\
 
@@ -142,7 +165,7 @@ Now we need to build a bowtie index for them:
 
 .. code-block:: bash
 
-    bowtie2-build GRCh38_phix.fasta  GRCh38_phix.index  
+    bowtie2-build GRCh38_phix.fasta GRCh38_phix.index  
 
 |image1|\  It is possible to automatically download a pre-indexed human
 genome in Bowtie2 format using the following command (but do not do this
@@ -233,7 +256,7 @@ improved? 
 |image3|\  Did sequences at the 5’ end become uniform? Why might that
 be? Is there anything that suggests that adaptor sequences were found? 
 
-|image29|\  To generate a summary file of how the sequence were
+|image2|\  To generate a summary file of how the sequence were
 categorised by Kneaddata, run the following command.  
 
 .. code-block:: bash
@@ -251,6 +274,101 @@ information available on how to do this in this Online Training guide
 provided by EMBL-EBI
 
 https://www.ebi.ac.uk/training/online/course/ebi-metagenomics-portal-submitting-metagenomics-da/considerations-submitting-metagenomic-data
+
+Assembly PhiX decontamination
+------------------------------
+
+|image1|\ Learning Objectives - in the following exercises you will generate a PhiX blast database, and
+run a blast search with a subset of assembled freshwater sediment metagenomic reads, to identify contamination.
+
+PhiX, used in the previous section of this practical, is a small bacteriophage genome typically used as a
+calibration control in sequencing runs. Most library preparations will use PhiX at low concentrations, however it can
+still appear in the sequencing run. If not filtered out, PhiX can form small spurious contigs which could
+be incorrectly classified as diversity.
+
+|image2|\  Generate the PhiX reference blast database
+
+.. code-block:: bash
+
+    cd /opt/data/decontamination
+    makeblastdb -in phix.fasta -input_type fasta -dbtype nucl -parse_seqids -out phix_blastDB
+
+
+|image2|\  Prepare the freshwater sediment example assembly file and search against the new blast database.
+This assembly file contains only a subset of the contigs for the purpose of this practical.
+
+.. code-block:: bash
+
+    cd /opt/data
+    gunzip freshwater_sediment_contigs.fa.gz
+    blastn -query freshwater_sediment_contigs.fa -db decontamination/phix_blastDB -task megablast -word_size 28 -best_hit_overhang 0.1 -best_hit_score_edge 0.1 -dust yes -evalue 0.0001 -min_raw_gapped_score 100 -penalty -5 -soft_masking true -window_size 100 -outfmt 6 -out freshwater_blast_out.txt
+
+|image1|\ The blast options are:
+
+    +---------------------------------------------------------------------------------------------+
+    |                                                                                             |
+    | \* **-query**, Input assembly fasta filee.                                                  |
+    |                                                                                             |
+    | \* **-out**, Output file                                                                    |
+    |                                                                                             |
+    | \* **-db**, Path to blast database.                                                         |
+    |                                                                                             |
+    | \* **-task**, Search type -“megablast”, for very similar sequences (e.g, sequencing errors) |
+    |                                                                                             |
+    | \* **-word_size**, Length of initial exact match                                            |
+    |                                                                                             |
+    |                                                                                             |
+    |                                                                                             |
+    +---------------------------------------------------------------------------------------------+
+
+|image2|\ Add headers to the blast output and look at the contents of the final output file
+
+.. code-block:: bash
+
+    cat blast_outfmt6.txt freshwater_blast_out.txt > freshwater_blast_out_headers.txt
+    less freshwater_blast_out_headers.txt
+
+|image3|\ Are the hits significant?
+
+|image3|\ What are the lengths of the matching contigs? We would typically filter
+metagenomic contigs at a length of 500bp. Would any PhiX contamination remain even after this filter?
+
+|image1|\ Now that PhiX contamination was identified, it is important to remove these contigs from the assembly file
+before further analysis or upload to public archives.
+
+Skin QC and negative controls
+-----------------------------
+
+|image1|\ Learning Objectives - This exercise will look at the application of negative control.
+The image below shows the taxonomic classification of two samples: a reagent negative control and a skin metagenomic
+sample. The classification was performed with kraken. Kraken takes a while to run, so we have done this for you
+and plotted the results. An example of the command used to do this:
+
+    +--------------------------------------------------------------------------------------------------------------------------------------------------+
+    |kraken2 --db standard_db --threshold 0.10 --threads 8 --use-names --fastq-input --report out.report --gzip-compressed in_1.fastq.gz in_2.fastq.gz |
+    +--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+See the kraken2 manual for more information: https://github.com/DerrickWood/kraken2/wiki/Manual
+
+|image2|\ Look at the following image depicting relative abundance of phyla in a skin sequencing run it's negative
+control.
+
+|image10|\
+
+|image3|\
+Is there any overlap between the negative control and skin sample?
+Can we map the negative control directly to the skin sample to remove all contaminants? If not, why?
+
+|image2|\ Look at the following image depicting relative abundance of genera in a skin sequencing run it's negative
+control.
+
+|image11|\
+
+|image3|\
+Are there any genera in the negative control which aren't present in the skin sample?
+If you do a googls search of this genus, where are they commonly found?
+With this information, where could this bacteria in the negative control have originated from?
+
 
 .. |image1| image:: media/info.png
    :width: 0.26667in
@@ -277,5 +395,11 @@ https://www.ebi.ac.uk/training/online/course/ebi-metagenomics-portal-submitting-
    :width: 6.26389in
    :height: 3.86181in
 .. |image9| image:: media/bandage.png
+   :width: 6.26389in
+   :height: 3.67569in
+.. |image10| image:: media/kraken_phylum.png
+   :width: 6.26389in
+   :height: 3.67569in
+.. |image11| image:: media/kraken_genus.png
    :width: 6.26389in
    :height: 3.67569in
