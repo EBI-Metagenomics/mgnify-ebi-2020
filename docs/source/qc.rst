@@ -361,7 +361,7 @@ See Pavian manual for the plots: https://ccb.jhu.edu/software/pavian/
 
 |image11|\
 
-image2|\ Look for similarities and differences at both the phylum and genus level - labelled as 'P' and 'G' on the
+|image2|\ Look for similarities and differences at both the phylum and genus level - labelled as 'P' and 'G' on the
 bottom axis.
 
 |image3|\
@@ -402,8 +402,8 @@ With this information, where could this bacteria in the negative control have or
    :width: 6.26389in
    :height: 3.67569in
 .. |image10| image:: media/kraken_neg.png
-   :width: 4.26389in
-   :height: 6.30833in
+   :width: 6.26389in
+   :height: 4.30833in
 .. |image11| image:: media/kraken_skin.png
-   :width: 4.26389in
-   :height: 6.30833in
+   :width: 6.26389in
+   :height: 4.30833in
