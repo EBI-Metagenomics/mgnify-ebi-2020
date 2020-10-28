@@ -350,7 +350,7 @@ and plotted the results. An example of the command used to do this:
 
 See the kraken2 manual for more information: https://github.com/DerrickWood/kraken2/wiki/Manual
 
-|image2|\ Look at the following image depicting relative abundance of phyla in a skin sequencing run it's negative
+|image2|\ Look at the following image - the relative abundance of phyla in a skin sequencing run and it's negative
 control.
 
 |image10|\
@@ -359,14 +359,14 @@ control.
 Is there any overlap between the negative control and skin sample?
 Can we map the negative control directly to the skin sample to remove all contaminants? If not, why?
 
-|image2|\ Look at the following image depicting relative abundance of genera in a skin sequencing run it's negative
+|image2|\ Look at the following image - the relative abundance of genera in a skin sequencing run and it's negative
 control.
 
 |image11|\
 
 |image3|\
 Are there any genera in the negative control which aren't present in the skin sample?
-If you do a googls search of this genus, where are they commonly found?
+If you do a google search of this genus, where are they commonly found?
 With this information, where could this bacteria in the negative control have originated from?
 
 
