@@ -336,12 +336,14 @@ metagenomic contigs at a length of 500bp. Would any PhiX contamination remain ev
 |image1|\ Now that PhiX contamination was identified, it is important to remove these contigs from the assembly file
 before further analysis or upload to public archives.
 
-Skin QC and negative controls
------------------------------
+Using Negative Controls
+-----------------------
 
-|image1|\ Learning Objectives - This exercise will look at the application of negative control.
-The image below shows the taxonomic classification of two samples: a reagent negative control and a skin metagenomic
-sample. The classification was performed with kraken. Kraken takes a while to run, so we have done this for you
+|image1|\ Learning Objectives - This exercise will look at the analysis of negative controls. You will assess the
+microbial diversity between a negative control and skin sample.
+
+The images below show the taxonomic classification of two samples: a reagent negative control and a skin metagenomic
+sample. The classification was performed with kraken2. Kraken2 takes a while to run, so we have done this for you
 and plotted the results. An example of the command used to do this:
 
     +--------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -349,20 +351,22 @@ and plotted the results. An example of the command used to do this:
     +--------------------------------------------------------------------------------------------------------------------------------------------------+
 
 See the kraken2 manual for more information: https://github.com/DerrickWood/kraken2/wiki/Manual
+See Pavian manual for the plots: https://ccb.jhu.edu/software/pavian/
 
-|image2|\ Look at the following image - the relative abundance of phyla in a skin sequencing run and it's negative
-control.
+|image1|\ The following image shows the microbial abundance in the negative control
 
 |image10|\
 
-|image3|\
-Is there any overlap between the negative control and skin sample?
-Can we map the negative control directly to the skin sample to remove all contaminants? If not, why?
-
-|image2|\ Look at the following image - the relative abundance of genera in a skin sequencing run and it's negative
-control.
+|image1|\ The following image shows the microbial abundance in the skin sample
 
 |image11|\
+
+image2|\ Look for similarities and differences at both the phylum and genus level - labelled as 'P' and 'G' on the
+bottom axis.
+
+|image3|\
+Is there any overlap between the negative control and skin sample phylum?
+Can we map the negative control directly to the skin sample to remove all contaminants? If not, why?
 
 |image3|\
 Are there any genera in the negative control which aren't present in the skin sample?
@@ -397,9 +401,9 @@ With this information, where could this bacteria in the negative control have or
 .. |image9| image:: media/bandage.png
    :width: 6.26389in
    :height: 3.67569in
-.. |image10| image:: media/kraken_phylum.png
+.. |image10| image:: media/kraken_neg.png
    :width: 4.26389in
    :height: 6.30833in
-.. |image11| image:: media/kraken_genus.png
+.. |image11| image:: media/kraken_skin.png
    :width: 4.26389in
    :height: 6.30833in
