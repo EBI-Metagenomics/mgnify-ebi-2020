@@ -399,7 +399,7 @@ With this information, where could this bacteria in the negative control have or
    :height: 3.67569in
 .. |image10| image:: media/kraken_phylum.png
    :width: 4.26389in
-   :height: 7.30833in
+   :height: 6.30833in
 .. |image11| image:: media/kraken_genus.png
    :width: 4.26389in
-   :height: 7.30833in
+   :height: 6.30833in
