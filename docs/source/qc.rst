@@ -343,7 +343,8 @@ Using Negative Controls
 microbial diversity between a negative control and skin sample.
 
 The images below show the taxonomic classification of two samples: a reagent negative control and a skin metagenomic
-sample. The classification was performed with kraken2. Kraken2 takes a while to run, so we have done this for you
+sample. The skin sample is taken from the antecubital fossa - the elbow crease, which is moist and site of
+high microbial diversity. The classification was performed with kraken2. Kraken2 takes a while to run, so we have done this for you
 and plotted the results. An example of the command used to do this:
 
     +--------------------------------------------------------------------------------------------------------------------------------------------------+
