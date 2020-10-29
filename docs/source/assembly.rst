@@ -38,14 +38,14 @@ and the use of MEGAHIT for performing co-assembly.
 
     cd /home/training/Data/Assembly/files
 
-|image1|\ To run metaspades you would execute the following commands: 
+|image1|\ To run metaspades you would execute the following commands (but don't run it now!): 
 
 .. code-block:: bash
 
     mkdir assembly
     metaspades.py -t 4 --only-assembler -m 10 -1 reads/oral_human_example_1_splitaa_kneaddata_paired_1.fastq -2 reads/oral_human_example_1_splitaa_kneaddata_paired_2.fastq -o assembly
 
-|image2|\ However, since the assembly process would take ~1h we are just going to analyse the output present in assembly.bak. Let's look at the contigs.fasta file.  
+|image2|\ Since the assembly process would take ~1h we are just going to analyse the output present in assembly.bak. Let's look at the contigs.fasta file.  
 
 For this, take the first 40 lines of the sequence and perform a blast search
 at NCBI (https://blast.ncbi.nlm.nih.gov/Blast.cgi, choose
@@ -105,9 +105,9 @@ load up the assembly_graph_after_simplification.gfa.   
 
 In the the Bandage GUI perform the following
 
-    Select File->Load graph
+    Select File -> Load graph
 
-    Navigate to  /home/training/Data/Assembly/files/assembly.bak/ and select on assembly_graph_after_simplification.gfa
+    Navigate to Home -> Data -> Assembly -> files -> assembly.bak and open the file assembly_graph_after_simplification.gfa
 
 Once loaded, you need to draw the graph. To do so, under the “Graph
 drawing” panel on the left side perform the following:
@@ -136,7 +136,7 @@ To do so, go to the 'BLAST' panel on the left side of the GUI.
     
     Step 2 - Select 'build Blast database'
     
-    Step 3 - Load from FASTA file -> navigate to the genome folder /home/training/Data/Assembly/files/genome and select GCA_000164695.fasta
+    Step 3 - Load from FASTA file. Navigate to the genome folder: Home -> Data -> Assembly -> files -> genome and select GCA_000164695.fasta
     
     Step 4 - Modify the BLAST filters to 95% identity
     
@@ -158,6 +158,18 @@ You should then see something like this:
 
 |image1|\ In the following steps of this exercise, we will look at
 performing co-assembly of multiple datasets. Each should take about 15-20 min. In case you do not manage to finish these on time, the directory **coassembly.bak** contains all the expected results.
+
+|image2|\ First, we need to make sure the output directories we are going to create do not already exist (MEGAHIT cannot overwrite existing directories). Run:
+
+.. code-block:: bash
+
+    rm -rf coassembly/assembly*
+
+|image2|\ Then, perform the coassemblies with MEGAHIT, as follows:
+
+.. code-block:: bash
+
+    megahit -1 reads/oral_human_example_1_splitac_kneaddata_paired_1.fastq -2 reads/oral_human_example_1_splitac_kneaddata_paired_2.fastq -o  coassembly/assembly1 -t 4 --k-list 23,51,77 
 
 .. code-block:: bash
 
