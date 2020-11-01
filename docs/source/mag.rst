@@ -234,5 +234,5 @@ taxon/sample name. Feel free to play around with the plot.
    :width: 0.26667in
    :height: 0.26667in
 .. |image5| image:: media/checkm.png
-   :width: 6.26389in
+   :width: 7.26389in
    :height: 1.37569in
