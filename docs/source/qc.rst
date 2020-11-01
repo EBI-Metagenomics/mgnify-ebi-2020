@@ -13,14 +13,13 @@ downloaded using the tarball from http://ftp.ebi.ac.uk/pub/databases/metagenomic
     cd /home/training/Data/Quality/files
     chmod -R 777 /home/training/Data/Quality
     export DATADIR=/home/training/Data/Quality/files
-    wget -q http://ftp.ebi.ac.uk/pub/databases/metagenomics/mgnify_courses/ebi_2020/quality.tar.gz
-    tar xzvf quality.tar.gz
+    xhost +
 
 Finally, start the docker container in the following way:
 
 .. code-block:: bash
 
-   docker run --rm -it  -e DISPLAY=$DISPLAY  -v $DATADIR:/opt/data -v /tmp/.X11-unix:/tmp/.X11-unix:rw  -e DISPLAY=docker.for.mac.localhost:0 microbiomeinformatics/mgnify-ebi-2020-qc-asssembly
+   docker run --rm -it  -e DISPLAY=$DISPLAY  -v $DATADIR:/opt/data -v /tmp/.X11-unix:/tmp/.X11-unix:rw -e DISPLAY=unix$DISPLAY microbiomeinformatics/mgnify-ebi-2020-qc-asssembly
 
 Quality control and filtering of the raw sequence files
 -----------------------------------------------------------------
@@ -39,9 +38,8 @@ has been mounted in ``/opt/data`` in the docker container.
    cd /opt/data
    ls
 
-|image1|\  Here you should see the same contents as you had from
-downloading and uncompressing the session data. As we write into this
-directory, we should be able to see this from inside the container, and
+|image1|\  Here you should see the same contents as you had in the working directory.
+As we write into this directory, we should be able to see this from inside the container, and
 on the filesystem of the computer running this container. We will use
 this to our advantage as we go through this practical. Unless stated
 otherwise all of the following commands should be executed in the
@@ -53,8 +51,10 @@ terminal running the Docker container.
 
     cd /opt/data
     mkdir fastqc_results
-    fastqc oral_human_example_1_splitaa.fastq.gz  --outdir fastqc_results
-    fastqc oral_human_example_2_splitaa.fastq.gz  --outdir fastqc_results
+    fastqc oral_human_example_1_splitaa.fastq.gz
+    fastqc oral_human_example_2_splitaa.fastq.gz
+    mv /opt/data/*.zip /opt/data/fastqc_results
+    mv /opt/data/*.html /opt/data/fastqc_results
 
 |image2|\  Now on your **local** computer, go to the browser, and
 ``File -> Open File``. Use the file navigator to select the following file
@@ -91,7 +91,7 @@ side of the report. Navigate to the “Per bases sequence content"
 
 |image5|\ 
 
-|image3|\ At around 15-19 nucleotides, there DNA composition becomes
+|image3|\ At around 15-19 nucleotides, the DNA composition becomes
 very even, however, a the 5’ end of the sequence there  are distinct
 differences. Why do you think that is?
 
@@ -165,7 +165,7 @@ Now we need to build a bowtie index for them:
 
 .. code-block:: bash
 
-    bowtie2-build GRCh38_phix.fasta GRCh38_phix.index  
+    bowtie2-build GRCh38_phix.fasta GRCh38_phix.index
 
 |image1|\  It is possible to automatically download a pre-indexed human
 genome in Bowtie2 format using the following command (but do not do this
@@ -194,7 +194,7 @@ We now need to uncompress the fastq files. 
     gunzip -c oral_human_example_2_splitaa.fastq.gz > oral_human_example_2_splitaa.fastq
     gunzip -c oral_human_example_1_splitaa.fastq.gz > oral_human_example_1_splitaa.fastq
     
-    kneaddata --remove-intermediate-output -t 2 --input oral_human_example_1_splitaa.fastq --input oral_human_example_2_splitaa.fastq --output /opt/data/clean --reference-db /opt/data/decontamination/GRCh38_phix.index --trimmomatic-options  "SLIDINGWINDOW:4:20 MINLEN:50" --bowtie2-options "--very-sensitive --dovetail" --remove-intermediate-output
+    kneaddata --remove-intermediate-output -t 2 --input oral_human_example_1_splitaa.fastq --input oral_human_example_2_splitaa.fastq --output /opt/data/clean --reference-db /opt/data/decontamination/GRCh38_phix.index --bowtie2-options "--very-sensitive --dovetail" --trimmomatic-options "SLIDINGWINDOW:4:20 MINLEN:50"
 
 |image1|\ The options above are:
 
@@ -234,7 +234,9 @@ files.  Do this within the clean directory.
 
     cd /opt/data/clean
     mkdir fastqc_final
-    <you construct the command>
+    <you construct the commands>
+    mv /opt/data/clean/*.zip /opt/data/clean/fastqc_final
+    mv /opt/data/clean/*.html /opt/data/clean/fastqc_final
 
 |image2|\  Also generate a multiqc report and look at the sequence
 quality historgrams. 
@@ -242,7 +244,7 @@ quality historgrams. 
 .. code-block:: bash
 
     cd /opt/data/clean
-    mkdir multiqc
+    mkdir multiqc_final
     <you construct the command>
 
 |image2|\  View the multiQC report as before using your browser. You
@@ -300,7 +302,7 @@ This assembly file contains only a subset of the contigs for the purpose of this
 .. code-block:: bash
 
     cd /opt/data
-    gunzip freshwater_sediment_contigs.fa.gz
+    gunzip -c freshwater_sediment_contigs.fa.gz > freshwater_sediment_contigs.fa
     blastn -query freshwater_sediment_contigs.fa -db decontamination/phix_blastDB -task megablast -word_size 28 -best_hit_overhang 0.1 -best_hit_score_edge 0.1 -dust yes -evalue 0.0001 -min_raw_gapped_score 100 -penalty -5 -soft_masking true -window_size 100 -outfmt 6 -out freshwater_blast_out.txt
 
 |image1|\ The blast options are:
@@ -352,6 +354,7 @@ and plotted the results. An example of the command used to do this:
     +--------------------------------------------------------------------------------------------------------------------------------------------------+
 
 See the kraken2 manual for more information: https://github.com/DerrickWood/kraken2/wiki/Manual
+
 See Pavian manual for the plots: https://ccb.jhu.edu/software/pavian/
 
 |image1|\ The following image shows the microbial abundance in the negative control
@@ -373,6 +376,23 @@ Can we map the negative control directly to the skin sample to remove all contam
 Are there any genera in the negative control which aren't present in the skin sample?
 If you do a google search of this genus, where are they commonly found?
 With this information, where could this bacteria in the negative control have originated from?
+
+
+|image1|\ For more practice assessing and trimming datasets,
+there is another set of raw reads called "skin_example_aa" from the skin metagenome available.
+These will require a fastqc or multiqc report, followed by trimming and mapping to the reference database with kneaddata.
+Using what you have learned previously, construct the relevant commands. Remember to check the quality before and after trimming.
+
+Hint: Consider other trimmomatic options from the manual
+http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf
+e.g. "ILLUMINACLIP", where /opt/data/NexteraPE-PE is a file of adapters.
+
+|image2|\ Navigate to skin folder and run quality control
+
+.. code-block:: bash
+
+    cd /opt/data/skin
+    <construct the required commands>
 
 
 .. |image1| image:: media/info.png
