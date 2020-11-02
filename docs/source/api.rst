@@ -16,24 +16,13 @@ Learning objectives
 Prerequisites
 #############
 
-For this tutorial you will need a working directory to store that data:
+For this tutorial you will need a working directory to store that data. 
+The first step is to create a folder in your home directory (~/).
 
 .. code-block:: bash
 
    mkdir -p ~/Mgnify2020/session_api/
-   export DATA_DIR=~/Mgnify2020/session_api/
-
-You will also need the dependencies, we will install them using miniconda.
-
-.. code-block:: bash
-
-   conda create -n mgnify-api python=3.8
-
-   conda activate mgnify-api
-
-   pip install pandas numpy scipy plotnine jsonapi-client
-
-We are using miniconda to create a virtual in
+   cd ~/Mgnify2020/session_api/
 
 
 An introduction to MGnify REST API
@@ -56,8 +45,12 @@ The base URL to the API is: https://www.ebi.ac.uk/metagenomics/api
 
 The API documentation at: https://www.ebi.ac.uk/metagenomics/api/docs
 
-|api_overview|\
-**Figure 1**: MGnify API browser.
+.. figure:: media/api/api_overview.png
+   :width: 800px
+   :target: https://www.ebi.ac.uk/metagenomics/api
+   :alt: MGnify API website
+
+   **Figure 1**: MGnify API browser.
 
 The base URL provides access to several resource collections, such as *studies*
 **samples**, **runs**, **analyses**, **genomes**, **biomes** and **experiment-types**
@@ -65,7 +58,7 @@ The base URL provides access to several resource collections, such as *studies*
 |action|\  Open https://www.ebi.ac.uk/metagenomics/api/latest/studies in your browser. This will a paginated list of all of the publicy available studies. Now open the list of samples using: https://www.ebi.ac.uk/metagenomics/api/latest/samples
 
 
-|question|\  What kind of experiment types can be found in MGnify?. Hint: follow the relavant link on: https://www.ebi.ac.uk/metagenomics/api and examine the variuos experiment type identifiers.
+|question|\  Question 1: What kind of experiment types can be found in MGnify?. Hint: follow the relavant link on: https://www.ebi.ac.uk/metagenomics/api and examine the variuos experiment type identifiers.
 
 
 |info|\  Details about a single project can be retrieved by providing a unique identifier assigned during the archiving process. For example, https://www.ebi.ac.uk/metagenomics/api/latest/studies/ERP009703 provides access to the Ocean Sampling Day (OSD) 2014 project.
@@ -82,18 +75,103 @@ The base URL provides access to several resource collections, such as *studies*
 
 |info|\  Parameters can be added to the URL to filter and sort the data, allowing the construction of more complex queries. The API browser lists the filters that are avaiable, as ilustrated in Figures 2 and 3.
 
-|filters|\
-**Figure 2**: Filters menu in MGnify API browser.
+.. figure:: media/api/filters_menu.png
+   :width: 800px
+   :target: https://www.ebi.ac.uk/metagenomics/api
+   :alt: Endpoint filter menu indicated
+   
+   **Figure 2**: Filters menu in MGnify API browser.
 
-|filters_popup|\
-**Figure 3**: Filters pop up menu for the Genomes list endpoint.
+.. figure:: media/api/filters_menu_popup.png
+   :width: 500px
+   :target: https://www.ebi.ac.uk/metagenomics/api
+   :alt: Endpoint filter menu
+   :figclass: align-center
+   
+   **Figure 3**: Filters pop up menu for the Genomes list endpoint.
 
 
 |question|\  Question 3: Using the API browser, how many results have been analysed with the pipeline version 4.0 for the OSD study ERP009703?
 
 
+Programmatic access
+###################
+
+In the next few exercies we are going to utilize some Python scripts to interact with the MGnify REST API programmatically. 
+
+The first step is to create the conda environment using `miniconda <https://docs.conda.io/en/latest/miniconda.html>`_.
+
+You will also need the dependencies and to install them we will use `miniconda`_.
+
+.. code-block:: bash
+
+   conda create -n mgnify-api python=3.8
+
+   conda activate mgnify-api
+
+   pip install pandas numpy scipy plotnine jsonapi-client
+
+We are using miniconda to create a virtual enviroment to install the required software.
+
+The next step is to obtain the script from the github repository.
+
+.. code-block:: bash
+
+   wget z
+
+Data exchange format
+********************
+
+The default format for data exchange utilized is JSON. This is data format that is compact and human-readable way of representing data. A brief overview of the format `json <https://www.digitalocean.com/community/tutorials/an-introduction-to-json>`_.
+
+The MGnify REST API returns a JSON object formatted data structure that contains the resource type, associated object identifier, attributes and relationships to other resources, allowing the construction of complex queries.
+
+.. figure:: media/api/json.png
+   :width: 500px
+   :target: https://www.ebi.ac.uk/metagenomics/api/v1/studies
+   :alt: Example JSON response
+   :figclass: align-center
+   
+   **Figure 4**: MGnify response output in JSON format.
+
+Standardized format data structures allow third party libraries in many programing languages to easily access data programmatically. For example, there are a number of scripts written in Python and R that interact with the MGnify API.
+
+Exercise 1
+**********
+
+In this exercise to browse sample metadata and visualise analysis results. First
+we are going to look at retrieving samples that match particular metadata
+search criteria.
+
+|action|\  Open the script using the text editor and open the file `exercise1_a.py`. Please, read thought the code. This script is using the API to obain a subset of the samples using some filters.
 
 
+|question|\  Question 4: What "type" of data is the script downloading?. Which filters are being used to get the filtered data from the API?.
+
+
+|info|\  Using these few lines of Python, we are able to retrieve the complete set of oceanographic samples taken at Arctic Ocean (latitude > 70)
+across all publicly available studies in MGnify.
+
+|action|\  Run the script in the console:
+
+.. code-block:: bash
+
+   python exercise1.py
+
+|action|\  Inspect the generated .csv file.
+
+
+|question|\  Question 5: How might you adapt the script to find soil samples taken at the equator?.
+
+
+Exercise 2
+**********
+
+For this exercise we will use the MGnify REST API to obtain data and then visualize the analysis results of the study "Metabolically active microbial communities in marine sediment under high-CO2 and low-pH extremes MGYS00002474 (DRP001073). In this study, DNA was extracted from sub-seafloor sediments and domain specific 16S rRNA gene primers were used to profile the archaeal and bacterial taxonomic communities.
+
+We will begin by retrieving taxonomic analysis data and then plotting relative abundance in the form of bar charts.
+
+|action|\  Open the script using the text editor and open the file `exercise2.py`. Read the code, even if you don't understand python the variables and constants allow this script to be easily modified.
 
 .. |info| image:: media/info.png
    :width: 0.26667in
@@ -104,18 +182,3 @@ The base URL provides access to several resource collections, such as *studies*
 .. |question| image:: media/question.png
    :width: 0.26667in
    :height: 0.26667in
-
-.. |api_overview| image:: media/api/api_overview.png
-   :width: 800px
-   :target: https://www.ebi.ac.uk/metagenomics/api
-   :alt: MGnify API website
-
-.. |filters| image:: media/api/filters_menu.png
-   :width: 800px
-   :target: https://www.ebi.ac.uk/metagenomics/api
-   :alt: MGnify API website
-
-.. |filters_popup| image:: media/api/filters_menu_popup.png
-   :width: 800px
-   :target: https://www.ebi.ac.uk/metagenomics/api
-   :alt: MGnify API website
