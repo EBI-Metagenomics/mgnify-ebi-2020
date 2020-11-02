@@ -210,10 +210,37 @@ We will begin by retrieving taxonomic analysis data and then plotting relative a
 
 
 |question|\  Question 10: How might you adapt the code for the analysis of other studies:
-- perform analysis of taxonomic results bases on the large ribosomal subunit rRNA?
+- perform analysis of taxonomic results bases on the large ribosomal subunit rRNA or the ITS region for fungi?
 - output the top 20 genera, rather that the top 10?
 - display functional analysis results (InterProScan or Gene Ontology terms)?
 
+
+Exercise 3
+**********
+
+For this exercise we will use the MGnify REST API to obtain data and then visualize the analysis genomes resource. We will begin by retrieving the genomes and the functiona annotatiosn coverage then plotting the coverage per region in the form of bar charts.
+
+
+|action|\  Open the file `exercise3.py <https://github.com/EBI-Metagenomics/mgnify-ebi-2020/blob/master/docs/source/scripts/exercise3.py>`_. Read the code, even if you don't understand python the variables and constants at the beginnnig of the file will allow the script to be easily modified.
+
+Execute the script to fetch the information and generate the chart.
+
+.. code-block:: bash
+
+   python exercise3.py
+
+
+Note: We have excluded "Europe" and "North America" to limit the number of matches. It's homework to run this using all the regions.
+
+|question|\  Question 11: Explore the chart.
+
+
+.. figure:: media/api/genomes_plot.png
+   :width: 500px
+   :alt: Geographic range of the pan-genomes per region of origin
+   :figclass: align-center
+   
+   **Figure 7**: Geographic range of the pan-genomes per region of origin.
 
 .. |info| image:: media/info.png
    :width: 0.26667in
