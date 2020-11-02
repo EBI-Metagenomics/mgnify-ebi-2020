@@ -143,7 +143,7 @@ Exercise 1
 
 In this exercise you will browse sample metadata and visualise analysis results. First we are going to look at retrieving samples that match particular metadata search criteria.
 
-|action|\  Read the code of the `exercise1.py <https://github.com/EBI-Metagenomics/mgnify-ebi-2020/blob/master/docs/source/scripts/exercise1.py>`_ scri[t]. This script is using the API to obtain a subset of the samples.
+|action|\  Read the code of the `exercise1.py <https://github.com/EBI-Metagenomics/mgnify-ebi-2020/blob/master/docs/source/scripts/api/exercise1.py>`_ scri[t]. This script is using the API to obtain a subset of the samples.
 
 
 |question|\  Question 4: What "type" of data is the script downloading?. Which filters are being used to get the filtered data from the API?.
@@ -182,7 +182,7 @@ For this exercise we will use the MGnify REST API to obtain data and then visual
 
 We will begin by retrieving taxonomic analysis data and then plotting relative abundance in the form of bar charts.
 
-|action|\  Open the file `exercise2.py <https://github.com/EBI-Metagenomics/mgnify-ebi-2020/blob/master/docs/source/scripts/exercise2.py>`_. Read the code, even if you don't understand python the variables and constants at the beginnnig of the file will allow the script to be easily modified. Note, there are a series study accessions that are currently commented out which will allow you to rerun the analysis with other projects. Ignore there for the time being and run the code with MGYS00002474 and inspect the resultant bar chart.
+|action|\  Open the file `exercise2.py <https://github.com/EBI-Metagenomics/mgnify-ebi-2020/blob/master/docs/source/scripts/api/exercise2.py>`_. Read the code, even if you don't understand python the variables and constants at the beginnnig of the file will allow the script to be easily modified. Note, there are a series study accessions that are currently commented out which will allow you to rerun the analysis with other projects. Ignore there for the time being and run the code with MGYS00002474 and inspect the resultant bar chart.
 
 .. code-block:: bash
 
@@ -217,7 +217,7 @@ Exercise 3
 For this exercise we will use the MGnify REST API to obtain data and then visualize the analysis genomes resource. We will begin by retrieving the genomes and the functiona annotatiosn coverage then plotting the coverage per region in the form of bar charts.
 
 
-|action|\  Open the file `exercise3.py <https://github.com/EBI-Metagenomics/mgnify-ebi-2020/blob/master/docs/source/scripts/exercise3.py>`_. Read the code, even if you don't understand python the variables and constants at the beginnnig of the file will allow the script to be easily modified.
+|action|\  Open the file `exercise3.py <https://github.com/EBI-Metagenomics/mgnify-ebi-2020/blob/master/docs/source/scripts/api/exercise3.py>`_. Read the code, even if you don't understand python the variables and constants at the beginnnig of the file will allow the script to be easily modified.
 
 Execute the script to fetch the information and generate the chart.
 
