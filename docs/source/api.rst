@@ -103,7 +103,7 @@ In the next few exercies we are going to utilize some Python scripts to interact
 
 The first step is to create the conda environment using `miniconda <https://docs.conda.io/en/latest/miniconda.html>`_.
 
-You will also need the dependencies and to install them we will use `miniconda`_.
+You will also need the dependencies and to install execute the following commands:
 
 .. code-block:: bash
 
@@ -113,20 +113,18 @@ You will also need the dependencies and to install them we will use `miniconda`_
 
    pip install pandas numpy scipy plotnine jsonapi-client
 
-We are using miniconda to create a virtual enviroment to install the required software.
-
 The next step is to obtain the scripts and data sets from the github repository.
 
 .. code-block:: bash
 
-   wget z
+   wget PLACE_HOLDER
 
 The data and scripts are also avaiable in the `source code of this documentation <https://github.com/EBI-Metagenomics/mgnify-ebi-2020>`_.
 
 Data exchange format
 ********************
 
-The default format for data exchange utilized is JSON. This is data format that is compact and human-readable way of representing data. A brief overview of the format `json <https://www.digitalocean.com/community/tutorials/an-introduction-to-json>`_.
+The industry default data exchange format for Web API is JSON. This format is a compact and human-readable way of representing data. A brief overview of the format `json <https://www.digitalocean.com/community/tutorials/an-introduction-to-json>`_.
 
 The MGnify REST API returns a JSON object formatted data structure that contains the resource type, associated object identifier, attributes and relationships to other resources, allowing the construction of complex queries.
 
@@ -143,11 +141,9 @@ Standardized format data structures allow third party libraries in many programi
 Exercise 1
 **********
 
-In this exercise to browse sample metadata and visualise analysis results. First
-we are going to look at retrieving samples that match particular metadata
-search criteria.
+In this exercise you will browse sample metadata and visualise analysis results. First we are going to look at retrieving samples that match particular metadata search criteria.
 
-|action|\  Open the script using the text editor and open the file `exercise1.py <https://github.com/EBI-Metagenomics/mgnify-ebi-2020/blob/master/docs/source/scripts/exercise1.py>`_. Please, read thought the code. This script is using the API to obain a subset of the samples using some filters.
+|action|\  Read the code of the `exercise1.py <https://github.com/EBI-Metagenomics/mgnify-ebi-2020/blob/master/docs/source/scripts/exercise1.py>`_ scri[t]. This script is using the API to obtain a subset of the samples.
 
 
 |question|\  Question 4: What "type" of data is the script downloading?. Which filters are being used to get the filtered data from the API?.
@@ -232,7 +228,7 @@ Execute the script to fetch the information and generate the chart.
 
 Note: We have excluded "Europe" and "North America" to limit the number of matches. It's homework to run this using all the regions.
 
-|question|\  Question 11: Explore the chart.
+|question|\  Question 11: How might you explain the differences across regions?.
 
 
 .. figure:: media/api/genomes_plot.png
