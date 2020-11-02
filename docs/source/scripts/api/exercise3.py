@@ -9,7 +9,9 @@ import pandas
 from jsonapi_client import Filter, Session
 from plotnine import *
 
-API_BASE = "https://www.ebi.ac.uk/metagenomics/api/v1"
+# API_BASE = "https://www.ebi.ac.uk/metagenomics/api/v1"
+
+API_BASE = "http://localhost:8000/v1"
 
 RESOURCE = "genomes"
 
@@ -84,8 +86,8 @@ with Session(API_BASE) as session:
             ),
         )
         + gb
-        + ggtitle("Geographic range of pan-genome")
-        + ylab("Relative abundance (%)")
+        + ggtitle("Geographic range of the pan-genomes")
+        + ylab("Geographic region (%)")
         + theme(panel_grid_major=element_blank(), panel_grid_minor=element_blank())
         + theme(axis_text_x=element_text(angle=90))
         + theme(axis_title_y=element_text(size=10))
