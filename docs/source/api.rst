@@ -19,6 +19,8 @@ Prerequisites
 For this tutorial you will need a working directory to store that data. 
 The first step is to create a folder in your home directory (~/).
 
+Open the terminal and execute the following instructions:
+
 .. code-block:: bash
 
    mkdir -p ~/Mgnify2020/session_api/
@@ -113,11 +115,13 @@ You will also need the dependencies and to install them we will use `miniconda`_
 
 We are using miniconda to create a virtual enviroment to install the required software.
 
-The next step is to obtain the script from the github repository.
+The next step is to obtain the scripts and data sets from the github repository.
 
 .. code-block:: bash
 
    wget z
+
+The data and scripts are also avaiable in the `source code of this documentation <https://github.com/EBI-Metagenomics/mgnify-ebi-2020>`_.
 
 Data exchange format
 ********************
@@ -134,7 +138,7 @@ The MGnify REST API returns a JSON object formatted data structure that contains
    
    **Figure 4**: MGnify response output in JSON format.
 
-Standardized format data structures allow third party libraries in many programing languages to easily access data programmatically. For example, there are a number of scripts written in Python and R that interact with the MGnify API.
+Standardized format data structures allow third party libraries in many programing languages to easily access data programmatically.
 
 Exercise 1
 **********
@@ -143,7 +147,7 @@ In this exercise to browse sample metadata and visualise analysis results. First
 we are going to look at retrieving samples that match particular metadata
 search criteria.
 
-|action|\  Open the script using the text editor and open the file `exercise1_a.py`. Please, read thought the code. This script is using the API to obain a subset of the samples using some filters.
+|action|\  Open the script using the text editor and open the file `exercise1.py <https://github.com/EBI-Metagenomics/mgnify-ebi-2020/blob/master/docs/source/scripts/exercise1.py>`_. Please, read thought the code. This script is using the API to obain a subset of the samples using some filters.
 
 
 |question|\  Question 4: What "type" of data is the script downloading?. Which filters are being used to get the filtered data from the API?.
@@ -152,16 +156,27 @@ search criteria.
 |info|\  Using these few lines of Python, we are able to retrieve the complete set of oceanographic samples taken at Arctic Ocean (latitude > 70)
 across all publicly available studies in MGnify.
 
-|action|\  Run the script in the console:
+|action|\  Run the script `exercise1.py`_ in the console:
 
 .. code-block:: bash
 
    python exercise1.py
 
-|action|\  Inspect the generated .csv file.
+|action|\  Inspect the generated `exercise1.csv <https://github.com/EBI-Metagenomics/mgnify-ebi-2020/blob/master/docs/source/data/api/exercise1.csv>`_ file.
 
+.. figure:: media/api/csv.png
+   :width: 500px
+   :target: https://github.com/EBI-Metagenomics/mgnify-ebi-2020/blob/master/docs/source/data/api/exercise1.csv
+   :alt: Exercise 1 CSV file
+   :figclass: align-center
+   
+   **Figure 5**: Exercise 1 retrieved data in CSV format.
 
 |question|\  Question 5: How might you adapt the script to find soil samples taken at the equator?.
+
+|action|\  Add an additional parameter '"study_accession": "MGYS00000462"' to the filters section in the script and run it again. You can check the study in the website `MGYS00000462 <https://www.ebi.ac.uk/metagenomics/studies/MGYS00000462>`_.
+
+|question|\  Question 6: How many of the OSD2014 samples were from the Artic Ocean?
 
 
 Exercise 2
@@ -171,7 +186,34 @@ For this exercise we will use the MGnify REST API to obtain data and then visual
 
 We will begin by retrieving taxonomic analysis data and then plotting relative abundance in the form of bar charts.
 
-|action|\  Open the script using the text editor and open the file `exercise2.py`. Read the code, even if you don't understand python the variables and constants allow this script to be easily modified.
+|action|\  Open the file `exercise2.py <https://github.com/EBI-Metagenomics/mgnify-ebi-2020/blob/master/docs/source/scripts/exercise2.py>`_. Read the code, even if you don't understand python the variables and constants at the beginnnig of the file will allow the script to be easily modified. Note, there are a series study accessions that are currently commented out which will allow you to rerun the analysis with other projects. Ignore there for the time being and run the code with MGYS00002474 and inspect the resultant bar chart.
+
+.. code-block:: bash
+
+   python exercise2.py
+
+.. figure:: media/api/MGYS00002474_phylum_plot.png
+   :width: 500px
+   :alt: Bar chart of the microbiome diversity in the study MGYS00002474 (DRP001073) at the phylum level.
+   :figclass: align-center
+   
+   **Figure 6**: Microbiome diversity in the study MGYS00002474 (DRP001073) at the phylum level.
+
+
+|question|\  Question 7: How similar or different are the phylum compositions of each analysis?. How might you explain any differences?.
+
+
+|question|\  Question 9: How many of the analyses look to target bacterial populations and how many are targeting the archaea?
+
+
+|info|\  It's easy to adapt the script for other analyses. For example, if you change the variable TAX_RANK (line 13 in `exercise2.py`_) to "genus" you can obtain the genus level results.
+
+
+|question|\  Question 10: How might you adapt the code for the analysis of other studies:
+- perform analysis of taxonomic results bases on the large ribosomal subunit rRNA?
+- output the top 20 genera, rather that the top 10?
+- display functional analysis results (InterProScan or Gene Ontology terms)?
+
 
 .. |info| image:: media/info.png
    :width: 0.26667in

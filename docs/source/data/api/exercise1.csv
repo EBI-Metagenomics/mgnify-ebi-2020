@@ -1,97 +1,54 @@
-accession,sample-name,longitude,latitude,geo-loc-name,study,biome
+accession,sample-name,longitude,latitude,geo-loc-name,studies,biome
 ERS089005,Arctic seawater sample collected on 10 March 2008,-123.9109,71.0386,Arctic Ocean,MGYS00000297,root:Environmental:Aquatic:Marine
 ERS1451501,North Sea - 1N,11.9099,78.9235,North Sea,MGYS00001316,root:Environmental:Aquatic:Marine
-ERS1568962,KD006_S11_87,-176.7614,88.4072,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568962,KD006_S11_87,-176.7614,88.4072,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568963,KD008_S1_4,-176.7614,88.4072,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568963,KD008_S1_4,-176.7614,88.4072,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568964,KD010_S2_6,-176.7614,88.4072,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568964,KD010_S2_6,-176.7614,88.4072,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568965,KD017_S12_85B,-89.2525,89.9903,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568965,KD017_S12_85B,-89.2525,89.9903,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568966,KD028_S10_83,-148.8943,87.772,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568966,KD028_S10_83,-148.8943,87.772,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568967,KD029_S10_82,-148.8943,87.772,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568967,KD029_S10_82,-148.8943,87.772,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568968,KD030_S9_81,-148.8943,87.772,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568968,KD030_S9_81,-148.8943,87.772,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568969,KD031_S8_80,-148.8943,87.772,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568969,KD031_S8_80,-148.8943,87.772,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568970,KD032_S7_79,-148.8943,87.772,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568970,KD032_S7_79,-148.8943,87.772,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568971,"Arctic sea ice metagenome, 1.5 m",-148.8943,87.772,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568971,"Arctic sea ice metagenome, 1.5 m",-148.8943,87.772,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568972,KD033_S9_78,-148.8943,87.772,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568972,KD033_S9_78,-148.8943,87.772,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568973,KD034_S6_77,-148.8943,87.772,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568973,KD034_S6_77,-148.8943,87.772,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568974,KD035_S5_76,-148.8943,87.772,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568974,KD035_S5_76,-148.8943,87.772,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568975,KD038_S7_74,-150.6091,85.723,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568975,KD038_S7_74,-150.6091,85.723,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568976,KD039_S4_73,-150.6091,85.723,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568976,KD039_S4_73,-150.6091,85.723,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568977,KD041_S6_71,-150.6091,85.723,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568977,KD041_S6_71,-150.6091,85.723,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568978,KD043_S3_69,-150.6091,85.723,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568978,KD043_S3_69,-150.6091,85.723,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568979,"Arctic sea ice metagenome, 1.435 m",-150.6091,85.723,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568979,"Arctic sea ice metagenome, 1.435 m",-150.6091,85.723,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568980,KD054_S1_66,-149.9723,85.1603,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568980,KD054_S1_66,-149.9723,85.1603,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568981,KD059_S4_61,-149.9723,85.1603,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568981,KD059_S4_61,-149.9723,85.1603,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568982,"Arctic sea ice metagenome, 0.3 m",-149.9723,85.1603,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568982,"Arctic sea ice metagenome, 0.3 m",-149.9723,85.1603,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568983,KD087_S6_18,-149.7905,82.5038,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568983,KD087_S6_18,-149.7905,82.5038,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
+ERS1568962,KD006_S11_87,-176.7614,88.4072,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568963,KD008_S1_4,-176.7614,88.4072,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568964,KD010_S2_6,-176.7614,88.4072,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568965,KD017_S12_85B,-89.2525,89.9903,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568966,KD028_S10_83,-148.8943,87.772,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568967,KD029_S10_82,-148.8943,87.772,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568968,KD030_S9_81,-148.8943,87.772,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568969,KD031_S8_80,-148.8943,87.772,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568970,KD032_S7_79,-148.8943,87.772,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568971,"Arctic sea ice metagenome, 1.5 m",-148.8943,87.772,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568972,KD033_S9_78,-148.8943,87.772,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568973,KD034_S6_77,-148.8943,87.772,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568974,KD035_S5_76,-148.8943,87.772,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568975,KD038_S7_74,-150.6091,85.723,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568976,KD039_S4_73,-150.6091,85.723,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568977,KD041_S6_71,-150.6091,85.723,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568978,KD043_S3_69,-150.6091,85.723,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568979,"Arctic sea ice metagenome, 1.435 m",-150.6091,85.723,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568980,KD054_S1_66,-149.9723,85.1603,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568981,KD059_S4_61,-149.9723,85.1603,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568982,"Arctic sea ice metagenome, 0.3 m",-149.9723,85.1603,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568983,KD087_S6_18,-149.7905,82.5038,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
 ERS1568984,"Arctic sea ice metagenome, 0.1 m",-149.7905,82.5039,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568985,KD102_S2_52,-147.8711,77.4476,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568985,KD102_S2_52,-147.8711,77.4476,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568986,KD150_S12_31,-162.496,71.9966,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568986,KD150_S12_31,-162.496,71.9966,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568987,KD013_S3_8,-89.2525,89.9903,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568987,KD013_S3_8,-89.2525,89.9903,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568988,KD014_S4_9,-89.2525,89.9903,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568988,KD014_S4_9,-89.2525,89.9903,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568989,KD014_S1_9,-89.2525,89.9903,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568989,KD014_S1_9,-89.2525,89.9903,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568990,KD036_S5_17,-150.6091,85.723,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568990,KD036_S5_17,-150.6091,85.723,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568991,KD053_S2_67,-149.9723,85.1603,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568991,KD053_S2_67,-149.9723,85.1603,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568992,KD099_S3_54,-147.8331,78.1739,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568992,KD099_S3_54,-147.8331,78.1739,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568993,KD115_S2_49,-158.8455,72.9989,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568993,KD115_S2_49,-158.8455,72.9989,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568994,"Arctic seawater metagenome, 137 m",-158.8455,72.9989,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568994,"Arctic seawater metagenome, 137 m",-158.8455,72.9989,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568995,KD118_S8_32,-158.8455,72.9989,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568995,KD118_S8_32,-158.8455,72.9989,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
+ERS1568985,KD102_S2_52,-147.8711,77.4476,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568986,KD150_S12_31,-162.496,71.9966,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568987,KD013_S3_8,-89.2525,89.9903,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568988,KD014_S4_9,-89.2525,89.9903,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568989,KD014_S1_9,-89.2525,89.9903,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568990,KD036_S5_17,-150.6091,85.723,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568991,KD053_S2_67,-149.9723,85.1603,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568992,KD099_S3_54,-147.8331,78.1739,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568993,KD115_S2_49,-158.8455,72.9989,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568994,"Arctic seawater metagenome, 137 m",-158.8455,72.9989,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568995,KD118_S8_32,-158.8455,72.9989,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
 ERS1568996,"Arctic seawater metagenome, 860 m",-158.8455,72.9989,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568997,KD120_S12_46,-158.8455,72.9989,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568997,KD120_S12_46,-158.8455,72.9989,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568998,KD120_S5_46,-158.8455,72.9989,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568998,KD120_S5_46,-158.8455,72.9989,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568999,KD121_S6_45,-158.8455,72.9989,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1568999,KD121_S6_45,-158.8455,72.9989,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1569000,KD122_S11_44,-158.8455,72.9989,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1569000,KD122_S11_44,-158.8455,72.9989,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
+ERS1568997,KD120_S12_46,-158.8455,72.9989,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568998,KD120_S5_46,-158.8455,72.9989,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1568999,KD121_S6_45,-158.8455,72.9989,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1569000,KD122_S11_44,-158.8455,72.9989,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
 ERS1569001,"Arctic seawater metagenome, 415 m",-158.8455,72.9989,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1569002,"Arctic seawater metagenome, 240 m",-158.8455,72.9989,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1569003,"Arctic seawater metagenome, 29 m",-159.6242,72.7978,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1569004,KD127_S10_41,-159.6242,72.7978,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1569004,KD127_S10_41,-159.6242,72.7978,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1569005,KD128_S10_40,-159.6242,72.7978,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1569005,KD128_S10_40,-159.6242,72.7978,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1569006,KD128_S1_40,-159.6242,72.7978,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1569006,KD128_S1_40,-159.6242,72.7978,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1569007,KD129_S11_39,-159.6242,72.7978,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1569007,KD129_S11_39,-159.6242,72.7978,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1569008,KD130_S9_36,-159.6157,72.7999,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1569008,KD130_S9_36,-159.6157,72.7999,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1569009,KD130_S12_36,-159.6157,72.7999,Arctic Ocean,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1569009,KD130_S12_36,-159.6157,72.7999,Arctic Ocean,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
+ERS1569004,KD127_S10_41,-159.6242,72.7978,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1569005,KD128_S10_40,-159.6242,72.7978,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1569006,KD128_S1_40,-159.6242,72.7978,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1569007,KD129_S11_39,-159.6242,72.7978,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1569008,KD130_S9_36,-159.6157,72.7999,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1569009,KD130_S12_36,-159.6157,72.7999,Arctic Ocean,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
 ERS1572817,North Sea - 1N - t0,11.9099,78.9235,North Sea,MGYS00001316,root:Environmental:Aquatic:Marine
 ERS1800270,ArcMicro_NICE15_1,22.2939,83.1672,Arctic Ocean,MGYS00001869,root:Environmental:Aquatic:Marine:Oceanic
 ERS1800271,ArcMicro_NICE15_2,22.2939,83.1672,Arctic Ocean,MGYS00001869,root:Environmental:Aquatic:Marine:Oceanic
@@ -104,224 +61,137 @@ ERS1800277,ArcMicro_NICE15_8,7.9856,80.7153,Arctic Ocean,MGYS00001869,root:Envir
 ERS1800278,ArcMicro_NICE15_9,7.9856,80.7153,Arctic Ocean,MGYS00001869,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972306,26-1_170427,-174.8173,83.755,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972307,26-1_170506,-174.8173,83.755,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972308,26-10_170427,-174.2108,83.7143,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972308,26-10_170427,-174.2108,83.7143,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972309,26-10_170506,-174.2108,83.7143,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972309,26-10_170506,-174.2108,83.7143,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
+ERS1972308,26-10_170427,-174.2108,83.7143,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972309,26-10_170506,-174.2108,83.7143,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
 ERS1972310,26-11_170427,-174.2109,83.7143,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972311,26-11_170506,-174.2109,83.7143,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972312,26-12_170427,-174.2108,83.7143,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972312,26-12_170427,-174.2108,83.7143,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972313,26-12_170506,-174.2108,83.7143,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972313,26-12_170506,-174.2108,83.7143,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972314,26-13_170427,-174.2108,83.7143,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972314,26-13_170427,-174.2108,83.7143,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972315,26-13_170506,-174.2108,83.7143,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972315,26-13_170506,-174.2108,83.7143,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972316,26-14_170427,-174.2108,83.7143,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972316,26-14_170427,-174.2108,83.7143,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
+ERS1972312,26-12_170427,-174.2108,83.7143,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972313,26-12_170506,-174.2108,83.7143,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972314,26-13_170427,-174.2108,83.7143,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972315,26-13_170506,-174.2108,83.7143,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972316,26-14_170427,-174.2108,83.7143,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
 ERS1972317,26-14_170506,-174.2109,83.7143,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972318,26-15_170427,-174.2109,83.7143,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972319,26-15_170506,-174.2108,83.7143,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972319,26-15_170506,-174.2108,83.7143,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972320,26-16_170427,-174.2108,83.7143,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972320,26-16_170427,-174.2108,83.7143,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972321,26-16_170506,-174.2108,83.7143,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972321,26-16_170506,-174.2108,83.7143,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
+ERS1972319,26-15_170506,-174.2108,83.7143,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972320,26-16_170427,-174.2108,83.7143,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972321,26-16_170506,-174.2108,83.7143,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
 ERS1972322,26-2_170427,-174.8173,83.755,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972323,26-2_170506,-174.8173,83.755,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972324,26-3_170427,-174.8173,83.755,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972325,26-3_170506,-174.8173,83.755,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972326,26-4_170427,-174.8173,83.755,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972327,26-4_170506,-174.8173,83.755,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972328,26-5_170427,-174.8173,83.7549,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972328,26-5_170427,-174.8173,83.7549,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972329,26-5_170506,-174.8173,83.7549,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972329,26-5_170506,-174.8173,83.7549,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972330,26-6_170427,-174.8173,83.7549,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972330,26-6_170427,-174.8173,83.7549,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972331,26-6_170506,-174.8173,83.7549,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972331,26-6_170506,-174.8173,83.7549,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972332,26-7_170427,-174.8173,83.7549,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972332,26-7_170427,-174.8173,83.7549,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972333,26-7_170506,-174.8173,83.7549,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972333,26-7_170506,-174.8173,83.7549,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
+ERS1972328,26-5_170427,-174.8173,83.7549,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972329,26-5_170506,-174.8173,83.7549,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972330,26-6_170427,-174.8173,83.7549,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972331,26-6_170506,-174.8173,83.7549,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972332,26-7_170427,-174.8173,83.7549,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972333,26-7_170506,-174.8173,83.7549,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
 ERS1972334,26-8_170427,-174.8173,83.755,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972335,26-8_170506,-174.8173,83.7549,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972335,26-8_170506,-174.8173,83.7549,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972336,26-9_170427,-174.2108,83.7143,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972336,26-9_170427,-174.2108,83.7143,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972337,26-9_170506,-174.2108,83.7143,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972337,26-9_170506,-174.2108,83.7143,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972338,30-1_170427,-179.9998,87.5301,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972338,30-1_170427,-179.9998,87.5301,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972339,30-1_170506,-179.9998,87.5301,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972339,30-1_170506,-179.9998,87.5301,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972340,30-10_170427,-178.9268,87.5856,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972340,30-10_170427,-178.9268,87.5856,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972341,30-10_170506,-178.9268,87.5856,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972341,30-10_170506,-178.9268,87.5856,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972342,30-11_170427,-178.9268,87.5856,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972342,30-11_170427,-178.9268,87.5856,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972343,30-11_170506,-178.9268,87.5856,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972343,30-11_170506,-178.9268,87.5856,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972344,30-12_170427,-178.9268,87.5856,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972344,30-12_170427,-178.9268,87.5856,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972345,30-12_170506,-178.9268,87.5856,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972345,30-12_170506,-178.9268,87.5856,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972346,30-13_170427,-178.9268,87.5856,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972346,30-13_170427,-178.9268,87.5856,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972347,30-13_170506,-178.9268,87.5856,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972347,30-13_170506,-178.9268,87.5856,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972348,30-14_170427,-178.9268,87.5856,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972348,30-14_170427,-178.9268,87.5856,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972349,30-14_170506,-178.9268,87.5856,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972349,30-14_170506,-178.9268,87.5856,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972350,30-15_170427,-178.9268,87.5856,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972350,30-15_170427,-178.9268,87.5856,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972351,30-15_170506,-178.9268,87.5856,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972351,30-15_170506,-178.9268,87.5856,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972352,30-16_170427,-178.9268,87.5856,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972352,30-16_170427,-178.9268,87.5856,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972353,30-16_170506,-178.9268,87.5856,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972353,30-16_170506,-178.9268,87.5856,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972354,30-17_170427,-178.9268,87.5856,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972354,30-17_170427,-178.9268,87.5856,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
+ERS1972335,26-8_170506,-174.8173,83.7549,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972336,26-9_170427,-174.2108,83.7143,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972337,26-9_170506,-174.2108,83.7143,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972338,30-1_170427,-179.9998,87.5301,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972339,30-1_170506,-179.9998,87.5301,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972340,30-10_170427,-178.9268,87.5856,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972341,30-10_170506,-178.9268,87.5856,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972342,30-11_170427,-178.9268,87.5856,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972343,30-11_170506,-178.9268,87.5856,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972344,30-12_170427,-178.9268,87.5856,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972345,30-12_170506,-178.9268,87.5856,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972346,30-13_170427,-178.9268,87.5856,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972347,30-13_170506,-178.9268,87.5856,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972348,30-14_170427,-178.9268,87.5856,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972349,30-14_170506,-178.9268,87.5856,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972350,30-15_170427,-178.9268,87.5856,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972351,30-15_170506,-178.9268,87.5856,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972352,30-16_170427,-178.9268,87.5856,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972353,30-16_170506,-178.9268,87.5856,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972354,30-17_170427,-178.9268,87.5856,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
 ERS1972355,30-17_170506,-178.9268,87.5856,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972356,30-18_170427,-178.9268,87.5856,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972356,30-18_170427,-178.9268,87.5856,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972357,30-18_170506,-178.9268,87.5856,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972357,30-18_170506,-178.9268,87.5856,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
+ERS1972356,30-18_170427,-178.9268,87.5856,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972357,30-18_170506,-178.9268,87.5856,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
 ERS1972358,30-2_170427,-179.9998,87.5301,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972359,30-2_170506,-179.9998,87.5301,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972360,30-3_170427,-179.9998,87.5301,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972361,30-3_170506,-179.9998,87.5301,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972362,30-4_170427,-179.9998,87.5301,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972362,30-4_170427,-179.9998,87.5301,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972363,30-4_170506,-179.9998,87.5301,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972363,30-4_170506,-179.9998,87.5301,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972364,30-5_170427,-179.9998,87.5301,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972364,30-5_170427,-179.9998,87.5301,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972365,30-5_170506,-179.9998,87.5301,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972365,30-5_170506,-179.9998,87.5301,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972366,30-6_170427,-179.9998,87.5301,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972366,30-6_170427,-179.9998,87.5301,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972367,30-6_170506,-179.9998,87.5301,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972367,30-6_170506,-179.9998,87.5301,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972368,30-7_170427,-179.9998,87.5301,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972368,30-7_170427,-179.9998,87.5301,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972369,30-7_170506,-179.9998,87.5301,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972369,30-7_170506,-179.9998,87.5301,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972370,30-8_170427,-179.9998,87.5301,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972370,30-8_170427,-179.9998,87.5301,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972371,30-8_170506,-179.9998,87.5301,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972371,30-8_170506,-179.9998,87.5301,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972372,30-9_170427,-178.9268,87.5856,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972372,30-9_170427,-178.9268,87.5856,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972373,30-9_170506,-178.9268,87.5856,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972373,30-9_170506,-178.9268,87.5856,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972374,KD001_170322,-173.095,76.5357,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972374,KD001_170322,-173.095,76.5357,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972375,KD001_170407,-173.095,76.5357,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972375,KD001_170407,-173.095,76.5357,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972376,KD007_170322,-176.7614,88.4072,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972376,KD007_170322,-176.7614,88.4072,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972377,KD007_170407,-176.7614,88.4072,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972377,KD007_170407,-176.7614,88.4072,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
+ERS1972362,30-4_170427,-179.9998,87.5301,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972363,30-4_170506,-179.9998,87.5301,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972364,30-5_170427,-179.9998,87.5301,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972365,30-5_170506,-179.9998,87.5301,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972366,30-6_170427,-179.9998,87.5301,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972367,30-6_170506,-179.9998,87.5301,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972368,30-7_170427,-179.9998,87.5301,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972369,30-7_170506,-179.9998,87.5301,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972370,30-8_170427,-179.9998,87.5301,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972371,30-8_170506,-179.9998,87.5301,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972372,30-9_170427,-178.9268,87.5856,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972373,30-9_170506,-178.9268,87.5856,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972374,KD001_170322,-173.095,76.5357,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972375,KD001_170407,-173.095,76.5357,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972376,KD007_170322,-176.7614,88.4072,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972377,KD007_170407,-176.7614,88.4072,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
 ERS1972378,KD009_170322,-176.7614,88.4072,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972379,KD009_170407,-176.7614,88.4072,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972380,KD011_170322,-176.7614,88.4072,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972381,KD011_170407,-176.7614,88.4072,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972382,KD012_170322,-176.7614,88.4072,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972382,KD012_170322,-176.7614,88.4072,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972383,KD012_170407,-176.7614,88.4072,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972383,KD012_170407,-176.7614,88.4072,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
+ERS1972382,KD012_170322,-176.7614,88.4072,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972383,KD012_170407,-176.7614,88.4072,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
 ERS1972384,KD015_170322,-89.2525,89.9903,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972385,KD015_170407,-89.2525,89.9903,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972386,KD016_170322,-89.2525,89.9903,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972386,KD016_170322,-89.2525,89.9903,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972387,KD016_170407,-89.2525,89.9903,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972387,KD016_170407,-89.2525,89.9903,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
+ERS1972386,KD016_170322,-89.2525,89.9903,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972387,KD016_170407,-89.2525,89.9903,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
 ERS1972388,KD020_170322,-89.2525,89.9903,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972389,KD020_170407,-89.2525,89.9903,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972390,KD021_170322,-89.2525,89.9903,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972390,KD021_170322,-89.2525,89.9903,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972391,KD021_170407,-89.2525,89.9903,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972391,KD021_170407,-89.2525,89.9903,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
+ERS1972390,KD021_170322,-89.2525,89.9903,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972391,KD021_170407,-89.2525,89.9903,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
 ERS1972392,KD025_170322,-148.8943,87.772,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972393,KD025_170407,-148.8943,87.772,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972394,KD040_170322,-150.0,85.0,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972394,KD040_170322,-150.0,85.0,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972395,KD040_170407,-150.0,85.0,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972395,KD040_170407,-150.0,85.0,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972396,KD042_170322,-150.0,85.0,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972396,KD042_170322,-150.0,85.0,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972397,KD042_170407,-150.0,85.0,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972397,KD042_170407,-150.0,85.0,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972398,KD055_170322,-149.9723,85.1603,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972398,KD055_170322,-149.9723,85.1603,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972399,KD055_170407,-149.9723,85.1603,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972399,KD055_170407,-149.9723,85.1603,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
+ERS1972394,KD040_170322,-150.0,85.0,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972395,KD040_170407,-150.0,85.0,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972396,KD042_170322,-150.0,85.0,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972397,KD042_170407,-150.0,85.0,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972398,KD055_170322,-149.9723,85.1603,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972399,KD055_170407,-149.9723,85.1603,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
 ERS1972400,KD056_170322,-149.9723,85.1603,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972401,KD056_170407,-149.9723,85.1603,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972402,KD057_170322,-149.9723,85.1603,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972402,KD057_170322,-149.9723,85.1603,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972403,KD057_170407,-149.9723,85.1603,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972403,KD057_170407,-149.9723,85.1603,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972404,KD058_170322,-149.9723,85.1603,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972404,KD058_170322,-149.9723,85.1603,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972405,KD058_170407,-149.9723,85.1603,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972405,KD058_170407,-149.9723,85.1603,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972406,KD060A_170322,-149.9723,85.1603,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972406,KD060A_170322,-149.9723,85.1603,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972407,KD060A_170407,-149.9723,85.1603,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972407,KD060A_170407,-149.9723,85.1603,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972408,KD083_170322,-149.7905,82.5038,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972408,KD083_170322,-149.7905,82.5038,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972409,KD083_170407,-149.7905,82.5038,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972409,KD083_170407,-149.7905,82.5038,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972410,KD084_170322,-149.7905,82.5038,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972410,KD084_170322,-149.7905,82.5038,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972411,KD084_170407,-149.7905,82.5038,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972411,KD084_170407,-149.7905,82.5038,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972412,KD085_170322,-149.7905,82.5038,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972412,KD085_170322,-149.7905,82.5038,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
+ERS1972402,KD057_170322,-149.9723,85.1603,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972403,KD057_170407,-149.9723,85.1603,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972404,KD058_170322,-149.9723,85.1603,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972405,KD058_170407,-149.9723,85.1603,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972406,KD060A_170322,-149.9723,85.1603,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972407,KD060A_170407,-149.9723,85.1603,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972408,KD083_170322,-149.7905,82.5038,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972409,KD083_170407,-149.7905,82.5038,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972410,KD084_170322,-149.7905,82.5038,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972411,KD084_170407,-149.7905,82.5038,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972412,KD085_170322,-149.7905,82.5038,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
 ERS1972413,KD085_170407,-149.7905,82.5039,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972414,KD088_170322,-149.7905,82.5038,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972414,KD088_170322,-149.7905,82.5038,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972415,KD088_170407,-149.7905,82.5038,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972415,KD088_170407,-149.7905,82.5038,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972416,KD089_170322,-149.7905,82.5038,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972416,KD089_170322,-149.7905,82.5038,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972417,KD089_170407,-149.7905,82.5038,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972417,KD089_170407,-149.7905,82.5038,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
+ERS1972414,KD088_170322,-149.7905,82.5038,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972415,KD088_170407,-149.7905,82.5038,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972416,KD089_170322,-149.7905,82.5038,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972417,KD089_170407,-149.7905,82.5038,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
 ERS1972418,KD090_170322,-149.7905,82.5039,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972419,KD090_170407,-149.7905,82.5039,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972420,KD091_170322,-149.7905,82.5039,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972421,KD091_170407,-149.7905,82.5039,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972422,KD097_170322,-147.8611,78.1655,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972423,KD097_170407,-147.8611,78.1655,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972423,KD097_170407,-147.8611,78.1655,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
+ERS1972423,KD097_170407,-147.8611,78.1655,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
 ERS1972424,KD101_170322,-147.8711,77.4476,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972425,KD101_170407,-147.8711,77.4476,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972426,KD103_170322,-148.8366,77.0066,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972427,KD103_170407,-148.8366,77.0066,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972428,KD104_170322,-148.8366,77.0066,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972428,KD104_170322,-148.8366,77.0066,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
+ERS1972428,KD104_170322,-148.8366,77.0066,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
 ERS1972429,KD104_170407,-148.8366,77.0066,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972430,KD105_170322,-148.8366,77.0066,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972430,KD105_170322,-148.8366,77.0066,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972431,KD105_170407,-148.8366,77.0066,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972431,KD105_170407,-148.8366,77.0066,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972432,KD107_170322,-149.5091,76.5011,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972432,KD107_170322,-149.5091,76.5011,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
+ERS1972430,KD105_170322,-148.8366,77.0066,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972431,KD105_170407,-148.8366,77.0066,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
+ERS1972432,KD107_170322,-149.5091,76.5011,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
 ERS1972433,KD107_170407,-149.5091,76.5011,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972434,KD108.12005_170322,-149.5091,76.5011,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972435,KD108.12005_170407,-149.5091,76.5011,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972436,KD108.12012_170322,-149.5091,76.5011,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972437,KD108.12012_170407,-149.5091,76.5011,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972438,KD109_170322,-149.5091,76.5011,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
-ERS1972438,KD109_170322,-149.5091,76.5011,,MGYS00002040,root:Environmental:Aquatic:Marine:Oceanic
+ERS1972438,KD109_170322,-149.5091,76.5011,,"MGYS00000991,MGYS00002040",root:Environmental:Aquatic:Marine:Oceanic
 ERS1972439,KD109_170407,-149.5091,76.5011,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972440,KD116_170322,-158.7448,72.9997,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
 ERS1972441,KD116_170407,-158.7448,72.9997,,MGYS00000991,root:Environmental:Aquatic:Marine:Oceanic
@@ -346,18 +216,13 @@ ERS3088421,metagenome_ArcMicro_MOSjICE_V6,7.7667,78.9068,,MGYS00003725,root:Envi
 ERS3088422,metagenome_ArcMicro_MOSjICE_V7,9.485,78.9753,,MGYS00003725,root:Environmental:Aquatic:Marine:Oceanic
 ERS3088423,metagenome_ArcMicro_MOSjICE_V8,9.485,78.9753,,MGYS00003725,root:Environmental:Aquatic:Marine:Oceanic
 ERS3088424,metagenome_ArcMicro_MOSjICE_V9,9.485,78.9753,,MGYS00003725,root:Environmental:Aquatic:Marine:Oceanic
-ERS3757522,LH1,-90.211,79.0767,,MGYS00005148,root:Environmental:Aquatic:Sediment
-ERS3757522,LH1,-90.211,79.0767,,MGYS00005295,root:Environmental:Aquatic:Sediment
-ERS3757523,LH2,-90.2122,79.0764,,MGYS00005148,root:Environmental:Aquatic:Sediment
-ERS3757523,LH2,-90.2122,79.0764,,MGYS00005295,root:Environmental:Aquatic:Sediment
+ERS3757522,LH1,-90.211,79.0767,,"MGYS00005148,MGYS00005295",root:Environmental:Aquatic:Sediment
+ERS3757523,LH2,-90.2122,79.0764,,"MGYS00005148,MGYS00005295",root:Environmental:Aquatic:Sediment
 ERS396648,ENA SRA sample ERS396648; run ERR414817,18.0167,78.9,Norway,MGYS00000379,root:Environmental:Aquatic:Freshwater
 ERS401803,2,18.0167,78.9,Norway,MGYS00000366,root:Environmental:Aquatic:Freshwater:Lake
-ERS667520,OSD146_2014-06-21_5m_NPL022,-2.8297,78.4533,,MGYS00000462,root:Environmental:Aquatic:Marine
-ERS667520,OSD146_2014-06-21_5m_NPL022,-2.8297,78.4533,,MGYS00001977,root:Environmental:Aquatic:Marine
-ERS667580,OSD80_2014-06-21_2m_NPL022,-20.3043,74.31,,MGYS00000462,root:Environmental:Aquatic:Marine
-ERS667580,OSD80_2014-06-21_2m_NPL022,-20.3043,74.31,,MGYS00001977,root:Environmental:Aquatic:Marine
-ERS667582,OSD80_2014-06-21_0m_NPL022,-20.3043,74.31,,MGYS00000462,root:Environmental:Aquatic:Marine
-ERS667582,OSD80_2014-06-21_0m_NPL022,-20.3043,74.31,,MGYS00001977,root:Environmental:Aquatic:Marine
+ERS667520,OSD146_2014-06-21_5m_NPL022,-2.8297,78.4533,,"MGYS00000462,MGYS00001977",root:Environmental:Aquatic:Marine
+ERS667580,OSD80_2014-06-21_2m_NPL022,-20.3043,74.31,,"MGYS00000462,MGYS00001977",root:Environmental:Aquatic:Marine
+ERS667582,OSD80_2014-06-21_0m_NPL022,-20.3043,74.31,,"MGYS00000462,MGYS00001977",root:Environmental:Aquatic:Marine
 ERS903619,Iron mat 1,6.0,71.0,Norway,MGYS00001488,root:Environmental:Aquatic:Marine:Hydrothermal vents:Microbial mats
 ERS903620,Iron mat 1,6.0,71.0,Norway,MGYS00001488,root:Environmental:Aquatic:Marine:Hydrothermal vents:Microbial mats
 ERS903621,Iron mat 1,6.0,71.0,Norway,MGYS00001488,root:Environmental:Aquatic:Marine:Hydrothermal vents:Microbial mats

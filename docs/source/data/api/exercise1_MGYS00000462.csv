@@ -1,0 +1,4 @@
+accession,sample-name,longitude,latitude,geo-loc-name,studies,biome
+ERS667520,OSD146_2014-06-21_5m_NPL022,-2.8297,78.4533,,"MGYS00000462,MGYS00001977",root:Environmental:Aquatic:Marine
+ERS667580,OSD80_2014-06-21_2m_NPL022,-20.3043,74.31,,"MGYS00000462,MGYS00001977",root:Environmental:Aquatic:Marine
+ERS667582,OSD80_2014-06-21_0m_NPL022,-20.3043,74.31,,"MGYS00000462,MGYS00001977",root:Environmental:Aquatic:Marine
