@@ -9,9 +9,7 @@ import pandas
 from jsonapi_client import Filter, Session
 from plotnine import *
 
-# API_BASE = "https://www.ebi.ac.uk/metagenomics/api/v1"
-
-API_BASE = "http://localhost:8000/v1"
+API_BASE = "https://www.ebi.ac.uk/metagenomics/api/v1"
 
 RESOURCE = "genomes"
 
