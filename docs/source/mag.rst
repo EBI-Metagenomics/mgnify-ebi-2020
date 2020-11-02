@@ -76,6 +76,8 @@ generate the coverage stats (*input.fastq.sam.bam).*
     cd /opt/data/assemblies/
     mkdir contigs.fasta.metabat-bins2000
 
+In this case, the directory might already be part of your VM, so do not worry if you get an error saying the directory already exists. You can move on to the next step.
+
 |image3|\  Run the following command to produce a
 *contigs.fasta.depth.txt* file, summarising the output depth for use with
 MetaBAT:
