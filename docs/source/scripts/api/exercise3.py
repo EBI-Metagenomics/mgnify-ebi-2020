@@ -3,100 +3,56 @@
 
 import argparse
 import csv
-from urllib.parse import urlencode
+import os
 
-import pandas
-from jsonapi_client import Filter, Session
-from plotnine import *
+import requests
+from jsonapi_client import Session
 
 API_BASE = "https://www.ebi.ac.uk/metagenomics/api/v1"
-
 RESOURCE = "genomes"
+GENOME_ACCESSION = "MGYG-HGUT-04644"
 
-# Filter genomes based on the geopgraphical origin
-REGION_FILTERS = {
-    "geo_origin": [
-        "South America",
-        "Africa",
-        "Asia",
-        "Oceania",
-    ]
-}
-
-ALL_REGIONS = [
-    "Africa",
-    "Asia",
-    "Europe",
-    "North America",
-    "Oceania",
-    "South America",
-]
-
-rows = []
-
-# The next piece of code retrieves the data from the API
 with Session(API_BASE) as session:
 
-    filters = Filter(urlencode(REGION_FILTERS, True))
+    genome = session.get(RESOURCE, GENOME_ACCESSION).resource
 
-    for genome in session.iterate(RESOURCE, filters):
-        for gr_region in genome.geographic_range:
-            if genome.num_genomes_total > 1:
-                rows.append(
-                    {
-                        "accession": genome.accession,
-                        "geographic_origin": genome.geographic_origin,
-                        "geographic_region": gr_region,
-                        "geographic_region_rel_abundance": 0,
-                    }
-                )
+    print(genome.accession)
 
-    data_frame = pandas.DataFrame(rows)
+    # let's put the files in a folder
+    if not os.path.exists(GENOME_ACCESSION):
+        os.mkdir(GENOME_ACCESSION)
 
-    # let's get the relative abundance of each region
-    for geo_origin, frame in data_frame.groupby("geographic_origin"):
-        abundances = data_frame.loc[
-            data_frame["geographic_origin"] == geo_origin, "geographic_region"
-        ].value_counts(normalize=True)
+    # this will iterate over the download files from the API for the genome
+    # and will download them, unless already downloaded
+    for download in session.iterate(RESOURCE + "/" + GENOME_ACCESSION + "/downloads"):
+        output_file = os.path.join(GENOME_ACCESSION, download.alias)
+        if os.path.exists(output_file):
+            print("Already downloaded: " + download.alias)
+            continue
+        print("Downloading: " + download.alias)
+        with requests.get(download.links.self) as response:
+            response.raise_for_status()
+            with open(output_file, "wb") as f:
+                f.write(response.content)
 
-        for gregion, abundance in abundances.items():
-            data_frame.loc[
-                (data_frame["geographic_origin"] == geo_origin)
-                & (data_frame["geographic_region"] == gregion),
-                "geographic_region_rel_abundance",
-            ] = (
-                abundance * 100
+    # we can also download the functional annotation that is
+    # stored in the API
+    with open(os.path.join(GENOME_ACCESSION, "API_COG.csv"), "w") as cog_file:
+        print("Getting the COG annotations from the API")
+        fields = [
+            "name",
+            "description",
+            "genome-count",
+            "pangenome-count",
+        ]
+        writer = csv.DictWriter(cog_file, fieldnames=fields)
+        writer.writeheader()
+        for cog in session.iterate(RESOURCE + "/" + GENOME_ACCESSION + "/cogs"):
+            writer.writerow(
+                {
+                    "name": cog.name,
+                    "description": cog.description,
+                    "genome-count": cog.genome_count,
+                    "pangenome-count": cog.pangenome_count,
+                }
             )
-
-    # remove dups (each region is duplicated now)
-    data_frame = data_frame.drop_duplicates(
-        subset=["geographic_origin", "geographic_region"], keep="last"
-    )
-
-    gb = geom_bar(stat="identity", colour="darkgrey", size=0.3, width=0.6, alpha=0.7)
-    gg = (
-        ggplot(
-            data_frame,
-            aes(
-                x=data_frame["geographic_origin"],
-                y=data_frame["geographic_region_rel_abundance"],
-                fill="geographic_region",
-            ),
-        )
-        + gb
-        + ggtitle("Geographic range of the pan-genomes")
-        + ylab("Geographic region (%)")
-        + theme(panel_grid_major=element_blank(), panel_grid_minor=element_blank())
-        + theme(axis_text_x=element_text(angle=90))
-        + theme(axis_title_y=element_text(size=10))
-        + theme(axis_text_y=element_text(size=10))
-        + theme(axis_title_x=element_blank())
-        + theme(axis_text_x=element_text(size=10))
-    )
-
-    ggsave(
-        filename="genomes_plot.png",
-        plot=gg,
-        device="png",
-        dpi=600,
-    )

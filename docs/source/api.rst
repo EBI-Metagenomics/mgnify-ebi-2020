@@ -111,15 +111,16 @@ You will also need the dependencies and to install execute the following command
 
    conda activate mgnify-api
 
-   pip install pandas numpy scipy plotnine jsonapi-client
+   pip install pandas numpy scipy plotnine jsonapi-client mg-toolkit requests
 
-The next step is to obtain the scripts and data sets from the github repository.
+The next step is to obtain the scripts and expected results for each exercise the course FTP server.
 
 .. code-block:: bash
 
-   wget PLACE_HOLDER
+   curl http://ftp.ebi.ac.uk/pub/databases/metagenomics/mgnify_courses/ebi_2020/api.tar.gz | tar xz --strip 1
 
-The data and scripts are also avaiable in the `source code of this documentation <https://github.com/EBI-Metagenomics/mgnify-ebi-2020>`_.
+
+The data and scripts are also avaiable in the `source code of this documentation <https://github.com/EBI-Metagenomics/mgnify-ebi-2020/tree/master/docs/source/scripts/api>`_.
 
 Data exchange format
 ********************
@@ -143,7 +144,7 @@ Exercise 1
 
 In this exercise you will browse sample metadata and visualise analysis results. First we are going to look at retrieving samples that match particular metadata search criteria.
 
-|action|\  Read the code of the `exercise1.py <https://github.com/EBI-Metagenomics/mgnify-ebi-2020/blob/master/docs/source/scripts/api/exercise1.py>`_ scri[t]. This script is using the API to obtain a subset of the samples.
+|action|\  Read the code of the `exercise1.py <https://github.com/EBI-Metagenomics/mgnify-ebi-2020/blob/master/docs/source/scripts/api/exercise1.py>`_ script. This script is using the API to obtain a subset of the samples.
 
 
 |question|\  Question 4: What "type" of data is the script downloading?. Which filters are being used to get the filtered data from the API?.
@@ -206,37 +207,51 @@ We will begin by retrieving taxonomic analysis data and then plotting relative a
 
 
 |question|\  Question 10: How might you adapt the code for the analysis of other studies:
-- perform analysis of taxonomic results bases on the large ribosomal subunit rRNA or the ITS region for fungi?
-- output the top 20 genera, rather that the top 10?
-- display functional analysis results (InterProScan or Gene Ontology terms)?
+* perform analysis of taxonomic results bases on the large ribosomal subunit rRNA or the ITS region for fungi?
+* output the top 20 genera, rather that the top 10?
+* display functional analysis results (InterProScan or Gene Ontology terms)?
 
 
 Exercise 3
 **********
 
-For this exercise we will use the MGnify REST API to obtain data and then visualize the analysis genomes resource. We will begin by retrieving the genomes and the functiona annotatiosn coverage then plotting the coverage per region in the form of bar charts.
+For this exercise we will use the MGnify REST API and the MG-Toolkit to download analysis files. `MG-Toolkit <https://pypi.org/project/mg-toolkit/>`_ is a Python command line application that allows download all of the sample metadata for a given study or sequence to a single csv file. At the moment of writing this the toolkit doesn't support MGnify genomes, for this resource we will use the MGnify REST API.
 
 
-|action|\  Open the file `exercise3.py <https://github.com/EBI-Metagenomics/mgnify-ebi-2020/blob/master/docs/source/scripts/api/exercise3.py>`_. Read the code, even if you don't understand python the variables and constants at the beginnnig of the file will allow the script to be easily modified.
+|info|\  We installed the toolkit when we created the conda environment.
 
-Execute the script to fetch the information and generate the chart.
+
+|question|\  Question 13: What type of data can we download using the Toolkit?.
+
+
+|action|\  Let's download the functional annotations for one study. Please, run the following commands:
+
+.. code-block:: bash
+
+    mg-toolkit -d bulk_download -a MGYS00005575 --result_group pathways_and_systems
+
+
+|info|\  This may take a few minutes.
+
+
+|question|\  Question 14: Based on the files the toolkit has downloaded, how many analyses has the study MGYS00005575?.
+
+
+|info|\  For the genome resource we will use the API directly to obtain all the Download files for the genome: MGYG-HGUT-04644
+
+|action|\  Open the file `exercise3.py <https://github.com/EBI-Metagenomics/mgnify-ebi-2020/blob/master/docs/source/scripts/api/exercise3.py>`_. Read the code. This script will download all the files from the downloads relationship for the selected genome.
+
+Execute the script to fetch the files:
 
 .. code-block:: bash
 
    python exercise3.py
 
 
-Note: We have excluded "Europe" and "North America" to limit the number of matches. It's homework to run this using all the regions.
+|action|\  Explore the different files that were downloaded.
 
-|question|\  Question 11: How might you explain the differences across regions?.
+|question|\  How could you modify the script to download the other functional annotations?.
 
-
-.. figure:: media/api/genomes_plot.png
-   :width: 500px
-   :alt: Geographic range of the pan-genomes per region of origin
-   :figclass: align-center
-   
-   **Figure 7**: Geographic range of the pan-genomes per region of origin.
 
 .. |info| image:: media/info.png
    :width: 0.26667in

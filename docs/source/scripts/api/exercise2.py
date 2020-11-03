@@ -70,9 +70,7 @@ with Session(API_BASE) as session:
     data_frame = pandas.DataFrame(rows)
 
     # let's aggregate by Phyla
-    data_frame = (
-        data_frame.groupby(["analysis", TAX_RANK])["count"].sum().reset_index()
-    )
+    data_frame = data_frame.groupby(["analysis", TAX_RANK])["count"].sum().reset_index()
 
     # let's get the relative abundance of each phyla
     for analysis, frame in data_frame.groupby("analysis"):
@@ -96,8 +94,7 @@ with Session(API_BASE) as session:
 
     for analysis, frame in data_frame.groupby("analysis"):
         top_rows = data_frame.loc[
-            (data_frame["analysis"] == analysis)
-            & (data_frame[TAX_RANK].isin(top10)),
+            (data_frame["analysis"] == analysis) & (data_frame[TAX_RANK].isin(top10)),
             "rel_abundance",
         ]
         # The Other aggregated row
@@ -140,9 +137,7 @@ with Session(API_BASE) as session:
     data_frame[TAX_RANK] = pandas.Categorical(data_frame[TAX_RANK], top10)
     data_frame = data_frame.sort_values(TAX_RANK)
 
-    gb = geom_bar(
-        stat="identity", colour="darkgrey", size=0.3, width=0.6, alpha=0.7
-    )
+    gb = geom_bar(stat="identity", colour="darkgrey", size=0.3, width=0.6, alpha=0.7)
     gg = (
         ggplot(
             data_frame,

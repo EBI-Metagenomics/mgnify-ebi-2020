@@ -37,7 +37,7 @@ with open(FILE_NAME, "w") as csvfile:
             "latitude_gte": 70,
             "experiment_type": "metagenomic",
             "ordering": "accession",
-            # Exercise STEP 
+            # Exercise STEP
             # other filters should be placed here
         }
 
