@@ -38,6 +38,10 @@ study_accession = "MGYS00002474"
 # on Different Environmental Matrices.
 # study_accession = "MGYS00000601"
 
+# MGYS00002115
+# The study includes fungal genetic diversity assessment by ITS-1 next generation sequencing (NGS) analyses
+# study_accession = "MGYS00002115"
+
 resource = "studies/" + study_accession + "/analyses"
 
 rows = []

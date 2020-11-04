@@ -200,7 +200,7 @@ We will begin by retrieving taxonomic analysis data and then plotting relative a
 Exercise 3
 **********
 
-For this exercise we will use the MGnify REST API and the MG-Toolkit to download analysis files. `MG-Toolkit <https://pypi.org/project/mg-toolkit/>`_ is a Python command line application that allows download all the sample metadata for a given study or sequence to a single csv file. At the moment of writing this the toolkit doesn't support MGnify genomes, for this resource we will use the MGnify REST API.
+For this exercise we will use the MGnify REST API and the `MG-Toolkit <https://pypi.org/project/mg-toolkit/>`_ to download analysis files. The toolkit is a command line application. At the moment of writing this the toolkit doesn't support MGnify genomes, for this resource we will use the MGnify REST API.
 
 
 |info|\  We installed the toolkit when we created the conda environment.
@@ -209,7 +209,14 @@ For this exercise we will use the MGnify REST API and the MG-Toolkit to download
 |question|\  Question 9: What type of data can we download using the Toolkit?.
 
 
-|action|\  Download the metadata for the study "DRP001073 (MGYS00002474)". Explore the generated csv file DRP001073.csv.
+|action|\  Download the metadata for the study "DRP001073 (MGYS00002474)". Execute the following command:
+
+.. code-block:: bash
+
+   mg-toolkit original_metadata -a DRP001073
+
+
+|info|\  Explore the generated csv file DRP001073.csv. Can you notice if there is something wrong with the metadata?
 
 
 |action|\  Let's download the functional annotations for one study. Run the following command in the terminal:
