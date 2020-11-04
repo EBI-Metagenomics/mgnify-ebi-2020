@@ -173,10 +173,6 @@ performing co-assembly of multiple datasets. Each should take about 15-20 min. I
 
 .. code-block:: bash
 
-    megahit -1 reads/oral_human_example_1_splitac_kneaddata_paired_1.fastq -2 reads/oral_human_example_1_splitac_kneaddata_paired_2.fastq -o  coassembly/assembly1 -t 4 --k-list 23,51,77 
-
-.. code-block:: bash
-
     megahit -1 reads/oral_human_example_1_splitac_kneaddata_paired_1.fastq,reads/oral_human_example_1_splitab_kneaddata_paired_1.fastq  -2 reads/oral_human_example_1_splitac_kneaddata_paired_2.fastq,reads/oral_human_example_1_splitab_kneaddata_paired_2.fastq -o coassembly/assembly2 -t 4 --k-list 23,51,77 
 
 .. code-block:: bash
