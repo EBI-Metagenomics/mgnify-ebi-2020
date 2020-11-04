@@ -2,9 +2,7 @@
 MGnify API data hunt
 ********************
 
-This tutorial provides an introduction to the API (Application Programming Interface) and tools & methods 
-that can be used to access microbiome data programmatically from MGnify. You will learn about the structure 
-of the API and the data, as well as how to write scripts to analyze data programmatically.
+This tutorial provides an introduction to the API (Application Programming Interface) and tools & methods that can be used to access microbiome data programmatically from MGnify. You will learn about the structure  of the API and the data, as well as how to write scripts to analyze data programmatically.
 
 Learning objectives
 ###################
@@ -43,10 +41,7 @@ the EBI ftp server.
 An introduction to MGnify REST API
 ##################################
 
-MGnify is a freely avaiable hub for the analysis and exploration of metagenomic, metatranscriptomic,
-amplicon and assembled datasets. The resource provides rich functional and taxonomic analyses of
-user-submitted sequences, as well as analysis of publicly avaiable metagenomic datasets drawn
-from the European Nucleotide Archive (ENA).
+MGnify is a freely avaiable hub for the analysis and exploration of metagenomic, metatranscriptomic, amplicon and assembled datasets. The resource provides rich functional and taxonomic analyses of user-submitted sequences, as well as analysis of publicly avaiable metagenomic datasets drawn from the European Nucleotide Archive (ENA).
 
 
 How to browse data using MGnify REST API
