@@ -47,21 +47,18 @@ resource = "studies/" + study_accession + "/analyses"
 rows = []
 
 with Session(API_BASE) as session:
-    # TODO: iterate?
+
     analyses = session.get(resource).resources
 
     analyses_accs = [a.accession for a in analyses]
 
-    # Select individual analyses, e.g. OSD
-    # analyses_accs = [""]
-
     for analysis_accession in analyses_accs:
 
-        # tax_annotations = .resources
-
-        for t in session.iterate(
+        tax_annotations = session.get(
             "/".join(["analyses", analysis_accession, "taxonomy", "ssu"])
-        ):
+        ).resources
+
+        for t in tax_annotations:
             if t.hierarchy.get(TAX_RANK):
                 rows.append(
                     {
@@ -86,20 +83,20 @@ with Session(API_BASE) as session:
     # let's save a copy in csv
     data_frame.to_csv(study_accession + "_" + TAX_RANK + ".csv")
 
-    # let's aggregate the abundances to reduce the noise, let's keep the top 10
+    # let's aggregate the abundances to reduce the noise, let's keep the top 20
     # and move the small ones to the Other category
-    top10 = sorted(
+    top20 = sorted(
         list(
             data_frame.groupby([TAX_RANK])["rel_abundance"]
             .agg("sum")
-            .nlargest(10)
+            .nlargest(20)
             .index
         )
     )
 
     for analysis, frame in data_frame.groupby("analysis"):
         top_rows = data_frame.loc[
-            (data_frame["analysis"] == analysis) & (data_frame[TAX_RANK].isin(top10)),
+            (data_frame["analysis"] == analysis) & (data_frame[TAX_RANK].isin(top20)),
             "rel_abundance",
         ]
         # The Other aggregated row
@@ -114,32 +111,15 @@ with Session(API_BASE) as session:
             ignore_index=True,
         )
 
-    # keep only top10 or Other
+    # keep only top20 or Other
     data_frame = data_frame.drop(
         data_frame[
-            (~data_frame[TAX_RANK].isin(top10)) & (data_frame[TAX_RANK] != "Other")
+            (~data_frame[TAX_RANK].isin(top20)) & (data_frame[TAX_RANK] != "Other")
         ].index
     )
 
-    # define colors for plotting
-    colors = [
-        "#A3A3A3",
-        "#FFED6F",
-        "#CCEBC5",
-        "#BC80BD",
-        "#D9D9D9",
-        "#FCCDE5",
-        "#B3DE69",
-        "#FDB462",
-        "#80B1D3",
-        "#FB8072",
-        "#FFFFB3",
-        "#BEBADA",
-        "#8DD3C7",
-    ]
-
-    top10.insert(0, "Other")
-    data_frame[TAX_RANK] = pandas.Categorical(data_frame[TAX_RANK], top10)
+    top20.insert(0, "Other")
+    data_frame[TAX_RANK] = pandas.Categorical(data_frame[TAX_RANK], top20)
     data_frame = data_frame.sort_values(TAX_RANK)
 
     gb = geom_bar(stat="identity", colour="darkgrey", size=0.3, width=0.6, alpha=0.7)
@@ -156,7 +136,7 @@ with Session(API_BASE) as session:
         + ggtitle(study_accession)
         + ylab("Relative abundance (%)")
         + theme(panel_grid_major=element_blank(), panel_grid_minor=element_blank())
-        + scale_fill_manual(values=colors)
+        + scale_fill_hue()
         + theme(axis_text_x=element_text(angle=90))
         + theme(axis_title_y=element_text(size=10))
         + theme(axis_text_y=element_text(size=10))
