@@ -220,6 +220,11 @@ Execute the script to fetch the files:
 
 |question|\  Question 11: How could you modify the script `exercise3.py` to download the other functional annotations?.
 
+Solutions
+#########
+
+To get the solutions to all the questions and R versions of the scripts :doc:`follow this link <scripts/api/solutions/solutions.rst>`.
+
 .. |info| image:: media/info.png
    :width: 0.26667in
    :height: 0.26667in
