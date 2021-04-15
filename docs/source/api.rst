@@ -223,7 +223,8 @@ Execute the script to fetch the files:
 Solutions
 #########
 
-To get the solutions to all the questions and R versions of the scripts :doc:`follow this link <scripts/api/solutions/solutions.rst>`.
+To get the solutions to all the questions and R versions of the scripts `follow this link <https://github.com/EBI-Metagenomics/mgnify-ebi-2020/blob/master/docs/source/scripts/api/solutions/solutions.rst>`_.
+
 
 .. |info| image:: media/info.png
    :width: 0.26667in

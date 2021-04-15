@@ -21,6 +21,14 @@ Finally, start the docker container in the following way:
 
    docker run --rm -it  -e DISPLAY=$DISPLAY  -v $DATADIR:/opt/data -v /tmp/.X11-unix:/tmp/.X11-unix:rw -e DISPLAY=unix$DISPLAY microbiomeinformatics/mgnify-ebi-2020-qc-asssembly
 
+
+.. note::
+   It's possible that the docker image is not avaiable in dockerhub.
+   In that case you can build the container using the `Dockerfile <https://github.com/EBI-Metagenomics/mgnify-ebi-2020/blob/master/docs/source/data/qc-assembly/Dockerfile>`_
+   
+   To build the container, download the Dockerfile and run "docker build -t microbiomeinformatics/mgnify-ebi-2020-qc-asssembly ." in the folder that contains the Dockerfile.
+
+
 Quality control and filtering of the raw sequence files
 -----------------------------------------------------------------
 
