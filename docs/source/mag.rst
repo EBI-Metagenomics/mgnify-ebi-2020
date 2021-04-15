@@ -17,7 +17,7 @@ For this tutorial you will need to first start the docker container by running:
 
 
 .. note::
-   It's possible that the docker image is not avaiable in dockerhub.
+   It's possible that the docker image is not available in dockerhub.
    In that case you can build the container using the `Dockerfile <https://github.com/EBI-Metagenomics/mgnify-ebi-2020/blob/master/docs/source/data/binning/Dockerfile>`_
    
    To build the container, download the Dockerfile and run "docker build -t microbiomeinformatics/mgnify-ebi-2020-binning ." in the folder that contains the Dockerfile.

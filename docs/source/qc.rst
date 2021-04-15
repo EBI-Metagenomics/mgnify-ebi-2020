@@ -23,7 +23,7 @@ Finally, start the docker container in the following way:
 
 
 .. note::
-   It's possible that the docker image is not avaiable in dockerhub.
+   It's possible that the docker image is not available in dockerhub.
    In that case you can build the container using the `Dockerfile <https://github.com/EBI-Metagenomics/mgnify-ebi-2020/blob/master/docs/source/data/qc-assembly/Dockerfile>`_
    
    To build the container, download the Dockerfile and run "docker build -t microbiomeinformatics/mgnify-ebi-2020-qc-asssembly ." in the folder that contains the Dockerfile.
