@@ -6,6 +6,8 @@ MAG generation
 - Assessment of quality (MIGMAGs)
 - Taxonomic assignment
 
+|image1|\  These instructions assume you are using the EBI Training Virual Machines. If you’re running this on your own computer instead, remember that some file paths will be different. In particular, ``/home/training/`` will be ``/home/<yourusername>``. 
+
 Prerequisites
 ---------------
 
