@@ -4,6 +4,8 @@ MGnify API data hunt
 
 This tutorial provides an introduction to the API (Application Programming Interface) and tools & methods that can be used to access microbiome data programmatically from MGnify. You will learn about the structure  of the API and the data, as well as how to write scripts to analyze data programmatically.
 
+|info|\  These instructions assume you are using the EBI Training Virual Machines. If you’re running this on your own computer instead, remember that some file paths will be different. In particular, ``/home/training/`` will be ``/home/<yourusername>``. 
+
 Learning objectives
 ###################
 
